@@ -91,13 +91,13 @@ export default function NewsletterForm({ locale, translations }: NewsletterFormP
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={translations.emailPlaceholder}
-          className="flex-1 px-4 py-3 rounded border-0 text-gray-900 focus:ring-2 focus:ring-brand-red outline-none transition-all duration-200"
+          className="flex-1 px-4 py-3 rounded-[4px] border-0 text-gray-900 focus:ring-2 focus:ring-brand-red outline-none transition-all duration-200"
           disabled={isSubmitting}
         />
         <button 
           type="submit"
           disabled={isSubmitting}
-          className="px-8 py-3 bg-brand-red text-white rounded font-semibold hover:bg-brand-600 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="px-8 py-3 bg-[#FE0100] text-white rounded-[4px] font-semibold hover:bg-[#E93B46] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           {isSubmitting ? translations.subscribingButton : translations.subscribeButton}
         </button>

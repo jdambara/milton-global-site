@@ -721,7 +721,38 @@
       "regulatory": "規制更新",
       "partnerships": "パートナーシップ"
     },
-    "readMore": "続きを読む"
+    "readMore": "続きを読む",
+    "categories": {
+      "announcement": "企業発表",
+      "partnership": "パートナーシップ",
+      "milestone": "マイルストーン",
+      "regulatory": "規制更新"
+    },
+    "meta": {
+      "title": "企業ニュース | ミルトングローバル発表",
+      "description": "規制更新、パートナーシップ、企業マイルストーンを含むミルトングローバルからの最新ニュースと発表。",
+      "keywords": "ミルトングローバル ニュース, 企業発表, FSAライセンス, Ultency承認, ブローカーニュース"
+    },
+    "newsletter": {
+      "title": "最新情報をお届け",
+      "description": "ミルトングローバルの最新ニュースとアップデートをメールでお届けします",
+      "emailPlaceholder": "メールアドレスを入力",
+      "subscribeButton": "購読する",
+      "subscribingButton": "送信中...",
+      "successTitle": "購読完了！",
+      "successMessage": "最新情報をお届けします",
+      "errorRequired": "メールアドレスを入力してください",
+      "errorGeneric": "エラーが発生しました。もう一度お試しください",
+      "thankYou": "購読ありがとうございます！最新情報をお届けします"
+    },
+    "backToNews": "ニュースに戻る",
+    "publishedBy": "投稿者",
+    "date": "日付",
+    "moreNews": "その他のニュース",
+    "learnMore": "ミルトングローバルについて詳しく",
+    "learnMoreDescription": "FSA規制下の取引ソリューションとUltency流動性サービスをご紹介します。",
+    "aboutUs": "会社概要",
+    "contactUs": "お問い合わせ"
   },
   "aboutPage": {
     "hero": {

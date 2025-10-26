@@ -725,7 +725,38 @@
       "regulatory": "Regulatorio",
       "partnerships": "Asociaciones"
     },
-    "readMore": "Leer más"
+    "readMore": "Leer más",
+    "categories": {
+      "announcement": "Anuncio de la Empresa",
+      "partnership": "Asociación",
+      "milestone": "Hito",
+      "regulatory": "Actualización Regulatoria"
+    },
+    "meta": {
+      "title": "Noticias de la Empresa | Anuncios Milton Global",
+      "description": "Últimas noticias y anuncios de Milton Global incluyendo actualizaciones regulatorias, asociaciones y hitos de la empresa.",
+      "keywords": "noticias Milton Global, anuncios empresa, licencia FSA, aprobación Ultency, noticias broker"
+    },
+    "newsletter": {
+      "title": "Mantente Actualizado",
+      "description": "Recibe las últimas noticias y actualizaciones de Milton Global directamente en tu bandeja de entrada.",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "subscribeButton": "Suscribirse",
+      "subscribingButton": "Suscribiendo...",
+      "successTitle": "¡Suscrito!",
+      "successMessage": "Te mantendremos actualizado con las últimas noticias.",
+      "errorRequired": "Por favor ingresa tu dirección de correo electrónico",
+      "errorGeneric": "Ocurrió un error. Por favor intenta de nuevo.",
+      "thankYou": "¡Gracias por suscribirte! Te mantendremos actualizado."
+    },
+    "backToNews": "Volver a Noticias",
+    "publishedBy": "Publicado por",
+    "date": "Fecha",
+    "moreNews": "Más Noticias",
+    "learnMore": "Conoce Más Sobre Milton Global",
+    "learnMoreDescription": "Descubre nuestras soluciones de trading reguladas por FSA y servicios de liquidez Ultency.",
+    "aboutUs": "Acerca de Nosotros",
+    "contactUs": "Contáctanos"
   },
   "aboutPage": {
     "hero": {

@@ -84,7 +84,7 @@
   
   /* Card Styles */
   .card {
-    @apply bg-white border border-gray-200 rounded shadow-sm transition-all duration-200;
+    @apply bg-white border border-gray-200 rounded-[4px] shadow-sm transition-all duration-200;
   }
   
   .card-hover {
@@ -92,7 +92,7 @@
   }
   
   .card-nested {
-    @apply bg-gray-50 border border-gray-200 rounded;
+    @apply bg-gray-50 border border-gray-200 rounded-[4px];
   }
   
   /* Container */

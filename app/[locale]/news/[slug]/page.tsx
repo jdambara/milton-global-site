@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
 import Card from '@/components/ui/Card';
 import Tag from '@/components/ui/Tag';
 import Button from '@/components/ui/Button';
 import { getNewsBySlug, getAllNews } from '@/lib/content/news';
+import { generateMetaTags, generateArticleSchema } from '@/lib/seo-utils';
 
 export async function generateStaticParams() {
   const news = getAllNews();
@@ -23,7 +25,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: 'en' | 'es' | 'ja'; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const news = getNewsBySlug(slug);
   
   if (!news) {
@@ -32,16 +34,16 @@ export async function generateMetadata({
     };
   }
 
-  return {
+  const baseUrl = `https://miltonglobal.com/${locale === 'en' ? '' : locale + '/'}news/${slug}`;
+  
+  return generateMetaTags(locale, {
     title: `${news.title} | Milton Global News`,
     description: news.excerpt,
-    openGraph: {
-      title: news.title,
-      description: news.excerpt,
-      type: 'article',
-      publishedTime: news.date,
-    },
-  };
+    keywords: `Milton Global news, ${news.title}, ${news.category}`,
+    url: baseUrl,
+    type: 'article',
+    image: `https://miltonglobal.com/images/news/${slug}-og.jpg`,
+  });
 }
 
 export default async function NewsDetailPage({
@@ -50,6 +52,7 @@ export default async function NewsDetailPage({
   params: Promise<{ locale: 'en' | 'es' | 'ja'; slug: string }>;
 }) {
   const { slug, locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'news' });
   const news = getNewsBySlug(slug);
   
   if (!news) {
@@ -61,13 +64,7 @@ export default async function NewsDetailPage({
     .slice(0, 2);
 
   const getCategoryLabel = (category: string) => {
-    const labels: Record<string, string> = {
-      'announcement': 'Company Announcement',
-      'partnership': 'Partnership',
-      'milestone': 'Milestone',
-      'regulatory': 'Regulatory Update'
-    };
-    return labels[category] || category;
+    return t(`categories.${category}` as any) || category;
   };
 
   const getCategoryColor = (category: string): 'regulation' | 'ultency' | 'forex' | 'default' => {
@@ -80,8 +77,25 @@ export default async function NewsDetailPage({
     return colors[category] || 'default';
   };
 
+  // Generate structured data for the article
+  const articleSchema = generateArticleSchema(locale, {
+    title: news.title,
+    description: news.excerpt,
+    author: news.author,
+    datePublished: news.date,
+    url: `https://miltonglobal.com/${locale === 'en' ? '' : locale + '/'}news/${slug}`,
+  });
+
   return (
     <div className="min-h-screen">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+      
       {/* News Header */}
       <section className="section bg-gradient-to-b from-green-50 to-white">
         <div className="container-custom">
@@ -93,7 +107,7 @@ export default async function NewsDetailPage({
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to News
+              {t('backToNews')}
             </Link>
 
             <div className="flex items-center space-x-3 mb-4">
@@ -158,11 +172,11 @@ export default async function NewsDetailPage({
               <div className="mt-12 pt-8 border-t border-gray-200">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-small font-semibold text-gray-900 mb-1">Published by</div>
+                    <div className="text-small font-semibold text-gray-900 mb-1">{t('publishedBy')}</div>
                     <div className="text-body text-gray-600">{news.author}</div>
                   </div>
                   <div>
-                    <div className="text-small font-semibold text-gray-900 mb-1">Date</div>
+                    <div className="text-small font-semibold text-gray-900 mb-1">{t('date')}</div>
                     <div className="text-body text-gray-600">
                       {new Date(news.date).toLocaleDateString(locale, {
                         year: 'numeric',
@@ -183,7 +197,7 @@ export default async function NewsDetailPage({
         <section className="section bg-gray-50">
           <div className="container-custom">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-h2 font-bold text-gray-900 mb-8 text-center">More News</h2>
+              <h2 className="text-h2 font-bold text-gray-900 mb-8 text-center">{t('moreNews')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedNews.map((related) => (
                   <Card key={related.slug} hover className="p-6">
@@ -216,17 +230,17 @@ export default async function NewsDetailPage({
       {/* CTA */}
       <section className="section">
         <div className="container-custom">
-          <Card className="p-12 bg-gradient-to-br from-green-600 to-green-800 text-white text-center max-w-4xl mx-auto">
-            <h2 className="text-h2 font-bold mb-4">Learn More About Milton Global</h2>
-            <p className="text-body-large text-green-100 mb-8">
-              Discover our FSA-regulated trading solutions and Ultency liquidity services.
+          <Card className="p-12 bg-gradient-to-br from-green-600 to-green-800 text-white text-center max-w-4xl mx-auto rounded-[4px]">
+            <h2 className="text-h2 font-bold mb-4">{t('learnMore')}</h2>
+            <p className="text-body-large text-green-50 mb-8">
+              {t('learnMoreDescription')}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <Button href={`/${locale === 'en' ? '' : locale + '/'}about`} variant="primary">
-                About Us
+                {t('aboutUs')}
               </Button>
               <Button href={`/${locale === 'en' ? '' : locale + '/'}contact`} variant="secondary">
-                Contact Us
+                {t('contactUs')}
               </Button>
             </div>
           </Card>

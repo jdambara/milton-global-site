@@ -6,20 +6,11 @@ import Tag from '@/components/ui/Tag';
 import NewsletterForm from '@/components/NewsletterForm';
 import { getAllLocalizedNews, getAuthorDisplayName } from '@/lib/content/news';
 import { generateMetaTags, generateArticleSchema } from '@/lib/seo-utils';
+import { genMeta } from '@/lib/seo/generate';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'news.meta' });
-  
-  const baseUrl = `https://miltonglobal.com/${locale === 'en' ? '' : locale + '/'}news`;
-  
-  return generateMetaTags(locale, {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords').split(', '),
-    url: baseUrl,
-    type: 'website',
-  });
+  return genMeta('/news', locale);
 }
 
 export default async function NewsPage({

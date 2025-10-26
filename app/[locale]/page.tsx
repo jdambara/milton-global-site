@@ -7,95 +7,11 @@ import UltencySection from '@/components/sections/UltencySection';
 import FSASection from '@/components/sections/FSASection';
 import LatestContentSection from '@/components/sections/LatestContentSection';
 import CTASection from '@/components/sections/CTASection';
+import { genMeta } from '@/lib/seo/generate';
 
 export async function generateMetadata({ params }: { params: Promise<{locale: string}> }): Promise<Metadata> {
   const { locale } = await params;
-  
-  const metaData = {
-    en: {
-      title: 'Milton Global | FSA-Regulated CFD Broker & Ultency Liquidity Provider',
-      description: 'Institutional-grade trading infrastructure powered by MetaQuotes Ultency. Seychelles FSA licensed (SD040). Operating Milton Prime and Milton Markets brands. Access 1000+ instruments with tight spreads.',
-      keywords: 'FSA regulated broker, Seychelles FSA SD040, Ultency liquidity provider, MetaQuotes Ultency, CFD broker, institutional trading, Milton Prime, Milton Markets, MT4, MT5, PAMM, FIX API',
-      ogTitle: 'Milton Global | FSA-Regulated Trading Infrastructure Provider',
-      ogDescription: 'Licensed by Seychelles FSA (SD040). Institutional-grade trading with MetaQuotes Ultency technology.',
-    },
-    es: {
-      title: 'Milton Global | Broker CFD Regulado FSA y Proveedor de Liquidez Ultency',
-      description: 'Infraestructura de trading institucional impulsada por MetaQuotes Ultency. Licencia FSA de Seychelles (SD040). Operando las marcas Milton Prime y Milton Markets. Acceso a 1000+ instrumentos.',
-      keywords: 'broker regulado FSA, FSA Seychelles SD040, proveedor liquidez Ultency, MetaQuotes Ultency, broker CFD, trading institucional, Milton Prime, Milton Markets, MT4, MT5, PAMM',
-      ogTitle: 'Milton Global | Proveedor de Infraestructura de Trading Regulado FSA',
-      ogDescription: 'Licenciado por FSA Seychelles (SD040). Trading institucional con tecnología MetaQuotes Ultency.',
-    },
-    ja: {
-      title: 'ミルトングローバル | FSA認可CFDブローカー＆ウルテンシー流動性プロバイダー【公式】',
-      description: 'MetaQuotes ウルテンシーによる機関投資家グレードの取引インフラ。セーシェルFSAライセンス（SD040）取得。ミルトンプライムとミルトンマーケッツを運営。1000以上の取引商品をタイトスプレッドで提供。',
-      keywords: 'FSA規制ブローカー, セーシェルFSA SD040, ウルテンシー流動性プロバイダー, MetaQuotes ウルテンシー, CFDブローカー, 機関投資家向け取引, ミルトンプライム, ミルトンマーケッツ, MT4, MT5, PAMM, FIX API',
-      ogTitle: 'ミルトングローバル | FSA認可取引インフラプロバイダー【公式】',
-      ogDescription: 'セーシェルFSA（SD040）認可。MetaQuotes ウルテンシー技術による機関投資家グレードの取引。',
-    }
-  };
-
-  const currentMeta = metaData[locale as keyof typeof metaData] || metaData.en;
-
-  return {
-    title: currentMeta.title,
-    description: currentMeta.description,
-    keywords: currentMeta.keywords,
-    authors: [{ name: 'Milton Global' }],
-    creator: 'Milton Global',
-    publisher: 'Milton Global Ltd',
-    formatDetection: {
-      email: false,
-      address: false,
-      telephone: false,
-    },
-    metadataBase: new URL('https://miltonglobal.com'),
-    alternates: {
-      canonical: `https://miltonglobal.com/${locale}`,
-      languages: {
-        'en': '/en',
-        'es': '/es',
-        'ja': '/ja',
-      },
-    },
-    openGraph: {
-      title: currentMeta.ogTitle,
-      description: currentMeta.ogDescription,
-      type: 'website',
-      locale: locale === 'ja' ? 'ja_JP' : locale === 'es' ? 'es_ES' : 'en_US',
-      alternateLocale: ['en_US', 'es_ES', 'ja_JP'],
-      url: `https://miltonglobal.com/${locale}`,
-      siteName: 'Milton Global',
-      images: [
-        {
-          url: '/images/og-image.png',
-          width: 1200,
-          height: 630,
-          alt: 'Milton Global - FSA Licensed Trading Infrastructure',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: currentMeta.ogTitle,
-      description: currentMeta.ogDescription,
-      images: ['/images/og-image.png'],
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    verification: {
-      google: 'google-verification-code',
-    },
-  };
+  return genMeta('/', locale as 'en'|'es'|'ja');
 }
 
 export default async function HomePage({ params }: { params: Promise<{locale: string}> }) {
@@ -116,6 +32,11 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
           url: 'https://miltonglobal.com/logos/milton-global-logo.png',
           width: 400,
           height: 100,
+        },
+        identifier: {
+          '@type': 'PropertyValue',
+          name: 'Seychelles FSA Securities Dealer License',
+          value: 'SD040',
         },
         sameAs: [
           'https://www.linkedin.com/company/milton-global',
@@ -178,9 +99,11 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
           '@type': 'SearchAction',
           target: {
             '@type': 'EntryPoint',
-            urlTemplate: `https://miltonglobal.com/${locale}/search?q={search_term_string}`,
+            urlTemplate: locale === 'en' 
+              ? 'https://miltonglobal.com/search?q={query}'
+              : `https://miltonglobal.com/${locale}/search?q={query}`,
           },
-          'query-input': 'required name=search_term_string',
+          'query-input': 'required name=query',
         },
         inLanguage: locale === 'ja' ? 'ja-JP' : locale === 'es' ? 'es-ES' : 'en-US',
       },
@@ -192,7 +115,9 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
             '@type': 'ListItem',
             position: 1,
             name: locale === 'ja' ? 'ホーム' : locale === 'es' ? 'Inicio' : 'Home',
-            item: `https://miltonglobal.com/${locale}`,
+            item: locale === 'en' 
+              ? 'https://miltonglobal.com'
+              : `https://miltonglobal.com/${locale}`,
           },
         ],
       },

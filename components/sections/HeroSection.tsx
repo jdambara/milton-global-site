@@ -11,38 +11,30 @@ export default function HeroSection() {
   const m = useTranslations('metrics');
   const locale = useLocale() as L;
 
-  const metrics = [
-    {
-      value: '9+',
-      label: m('yearsInBusiness'),
-      sublabel: m('yearsInBusinessSub'),
-    },
-    {
-      value: '$2.8B',
-      label: m('dailyVolume'),
-      sublabel: m('dailyVolumeSub'),
-    },
-    {
-      value: '150+',
-      label: m('institutionalClients'),
-      sublabel: m('institutionalClientsSub'),
-    },
-    {
-      value: '99.98%',
-      label: m('uptime'),
-      sublabel: m('uptimeSub'),
-    },
-  ];
+  const metrics = ['a', 'b', 'c', 'd'].map(k => ({
+    value: m(`${k}.value`),
+    label: m(`${k}.label`),
+    sublabel: m.raw(`${k}.sub` as any) || '',
+  }));
 
   return (
     <section className="relative min-h-[600px] md:min-h-[700px] section">
       {/* Full-screen Background Image */}
       <div className="absolute inset-0 z-0">
+        {/* Desktop Image */}
         <Image
           src="/images/milton-global-hero.png"
           alt="Milton Global Trading Platform"
           fill
-          className="object-cover object-right"
+          className="object-cover object-right hidden md:block"
+          priority
+        />
+        {/* Mobile Image */}
+        <Image
+          src="/images/milton-global-hero-mobile.png"
+          alt="Milton Global Trading Platform"
+          fill
+          className="object-cover object-right md:hidden"
           priority
         />
         {/* Dark overlay for better text readability */}
@@ -57,11 +49,11 @@ export default function HeroSection() {
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            <span className="font-semibold">IFX EXPO Asia 2025</span>
+            <span className="font-semibold">{t('ifxBanner.event')}</span>
             <span className="mx-2 opacity-60">|</span>
-            <span>Oct 26-28, Hong Kong</span>
+            <span>{t('ifxBanner.date')}</span>
             <span className="mx-2 opacity-60">|</span>
-            <span>Meet us there!</span>
+            <span>{t('ifxBanner.cta')}</span>
           </div>
 
           {/* Main Heading */}
@@ -81,11 +73,11 @@ export default function HeroSection() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4 mb-12 md:mb-16">
-            <Button href={lp(locale, 'contact')} variant="primary">
-              {t('ctaPrimary')}
-            </Button>
             <Button href={lp(locale, 'services')} variant="secondary">
               {t('ctaSecondary')}
+            </Button>
+            <Button href={lp(locale, 'contact')} variant="primary">
+              {t('ctaPrimary')}
             </Button>
           </div>
         </div>
@@ -100,9 +92,11 @@ export default function HeroSection() {
               <div className="text-small font-semibold text-white/90 mb-0.5">
                 {metric.label}
               </div>
-              <div className="text-caption text-white/60">
-                {metric.sublabel}
-              </div>
+              {metric.sublabel && (
+                <div className="text-caption text-white/60">
+                  {metric.sublabel}
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Redirect /en to root (English should be at root)
+      { source: '/en', destination: '/', permanent: true },
+      { source: '/en/:path*', destination: '/:path*', permanent: true },
+      // Existing redirects
       { source: '/es-es', destination: '/es', permanent: true },
       { source: '/es-es/:path*', destination: '/es/:path*', permanent: true },
       { source: '/ultancy-liquidity-provider', destination: '/ultency-liquidity-provider', permanent: true },

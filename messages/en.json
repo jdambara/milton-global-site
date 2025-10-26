@@ -28,21 +28,38 @@
     }
   },
   "hero": {
-    "title": "Global Infrastructure for Modern Trading",
-    "subtitle": "The complete ecosystem for launching and scaling financial services",
-    "description": "From technology and liquidity to regulation and operations, Milton Global provides everything brokers need to compete globally. Whether you're launching a new venture or scaling existing operations, we deliver the integrated infrastructure that powers successful financial businesses.",
+    "title": "FSA-licensed brokerage infrastructure for MT4/MT5 brands",
+    "subtitle": "Connectivity and hosting • Liquidity and bridge • KYC/AML onboarding • Risk and reporting • PAMM • White-label",
+    "description": "Milton Global provides the end-to-end infrastructure brokers use to launch and scale. From platform connectivity and liquidity to compliance and operations, we deliver a single, integrated stack.",
     "ctaPrimary": "Book IFX EXPO Meeting",
-    "ctaSecondary": "Explore Our Services"
+    "ctaSecondary": "Explore Our Services",
+    "ifxBanner": {
+      "event": "IFX EXPO Asia 2025",
+      "date": "Oct 26-28, Hong Kong",
+      "cta": "Meet us there!"
+    }
   },
   "metrics": {
-    "yearsInBusiness": "Years",
-    "yearsInBusinessSub": "Established 2016",
-    "dailyVolume": "Daily Volume",
-    "dailyVolumeSub": "Average Trading",
-    "institutionalClients": "Institutional Clients",
-    "institutionalClientsSub": "Global Partners",
-    "uptime": "System Uptime",
-    "uptimeSub": "2024 Average"
+    "a": {
+      "value": "SD040",
+      "label": "FSA Securities Dealer",
+      "sub": "Licensed & Regulated"
+    },
+    "b": {
+      "value": "2016",
+      "label": "Established",
+      "sub": "9+ years operating"
+    },
+    "c": {
+      "value": "2",
+      "label": "Brands operated",
+      "sub": "Milton Prime & Milton Markets"
+    },
+    "d": {
+      "value": "3",
+      "label": "Languages",
+      "sub": "EN / ES / JA"
+    }
   },
   "about": {
     "title": "Milton Global",

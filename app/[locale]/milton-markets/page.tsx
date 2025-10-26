@@ -6,60 +6,11 @@ import { lp, type L } from '@/lib/seo/paths';
 import { useTranslations, useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import { genMeta } from '@/lib/seo/generate';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'miltonMarketsPage.meta' });
-  
-  const url = locale === 'en' 
-    ? 'https://miltonglobal.com/milton-markets'
-    : `https://miltonglobal.com/${locale}/milton-markets`;
-  
-  return {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
-    alternates: {
-      canonical: url,
-      languages: {
-        'en': 'https://miltonglobal.com/milton-markets',
-        'es': 'https://miltonglobal.com/es/milton-markets',
-        'ja': 'https://miltonglobal.com/ja/milton-markets',
-      },
-    },
-    openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: url,
-      siteName: 'Milton Global',
-      type: 'website',
-      images: [
-        {
-          url: '/logos/milton-markets-logo.svg',
-          width: 1200,
-          height: 630,
-          alt: locale === 'ja' ? 'ミルトンマーケッツ - グローバル取引プラットフォーム' : 'Milton Markets - Global Trading Platform',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['/logos/milton-markets-logo.svg'],
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-  };
+  return genMeta('/milton-markets', locale);
 }
 
 function MiltonMarketsContent() {

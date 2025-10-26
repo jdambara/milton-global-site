@@ -5,16 +5,11 @@ import Card from '@/components/ui/Card';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Tag from '@/components/ui/Tag';
 import { getAllArticles } from '@/lib/content/articles';
+import { genMeta } from '@/lib/seo/generate';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale });
-  
-  return {
-    title: t('articles.meta.title'),
-    description: t('articles.meta.description'),
-    keywords: t('articles.meta.keywords'),
-  };
+  return genMeta('/articles', locale);
 }
 
 export default async function ArticlesPage({

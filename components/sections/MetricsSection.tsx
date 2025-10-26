@@ -5,28 +5,11 @@ import { useTranslations } from 'next-intl';
 export default function MetricsSection() {
   const t = useTranslations('metrics');
 
-  const metrics = [
-    {
-      value: '9+',
-      label: t('yearsInBusiness'),
-      sublabel: t('yearsInBusinessSub'),
-    },
-    {
-      value: '$2.8B',
-      label: t('dailyVolume'),
-      sublabel: t('dailyVolumeSub'),
-    },
-    {
-      value: '150+',
-      label: t('institutionalClients'),
-      sublabel: t('institutionalClientsSub'),
-    },
-    {
-      value: '99.98%',
-      label: t('uptime'),
-      sublabel: t('uptimeSub'),
-    },
-  ];
+  const metrics = ['a', 'b', 'c', 'd'].map(k => ({
+    value: t(`${k}.value`),
+    label: t(`${k}.label`),
+    sublabel: t.raw(`${k}.sub` as any) || '',
+  }));
 
   return (
     <section className="section bg-gray-900">
@@ -40,9 +23,11 @@ export default function MetricsSection() {
               <div className="text-body font-semibold text-white mb-1">
                 {metric.label}
               </div>
-              <div className="text-small text-gray-400">
-                {metric.sublabel}
-              </div>
+              {metric.sublabel && (
+                <div className="text-small text-gray-400">
+                  {metric.sublabel}
+                </div>
+              )}
             </div>
           ))}
         </div>

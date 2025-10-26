@@ -9,15 +9,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages with SEO priorities
   const staticPages = [
     { path: '', priority: 1.0, changeFrequency: 'daily' as const },
-    { path: '/milton-prime', priority: 0.95, changeFrequency: 'weekly' as const },
-    { path: '/milton-markets', priority: 0.95, changeFrequency: 'weekly' as const },
+    { path: '/milton-prime', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/milton-markets', priority: 0.9, changeFrequency: 'weekly' as const },
     { path: '/fsa-regulation', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/ultancy-liquidity-provider', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/about', priority: 0.85, changeFrequency: 'monthly' as const },
-    { path: '/services', priority: 0.85, changeFrequency: 'weekly' as const },
+    { path: '/ultency-liquidity-provider', priority: 0.9, changeFrequency: 'monthly' as const },
+    { path: '/about', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/services', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/articles', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/news', priority: 0.8, changeFrequency: 'daily' as const },
-    { path: '/contact', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
   // Generate static page entries for all locales

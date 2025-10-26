@@ -2,15 +2,11 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import ContactForm from './ContactForm';
+import { genMeta } from '@/lib/seo/generate';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }): Promise<Metadata> {
   const { locale } = await params;
-  
-  return {
-    title: 'Contact Milton Global | Get in Touch',
-    description: 'Contact Milton Global for partnership inquiries, institutional solutions, or general questions about our services.',
-    keywords: 'contact, Milton Global, partnership, institutional sales, support',
-  };
+  return genMeta('/contact', locale);
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }) {

@@ -28,21 +28,38 @@
     }
   },
   "hero": {
-    "title": "Infraestructura Global para Trading Moderno",
-    "subtitle": "El ecosistema completo para lanzar y escalar servicios financieros",
-    "description": "Desde tecnología y liquidez hasta regulación y operaciones, Milton Global proporciona todo lo que los brókeres necesitan para competir globalmente. Ya sea que esté lanzando un nuevo negocio o escalando operaciones existentes, entregamos la infraestructura integrada que impulsa negocios financieros exitosos.",
+    "title": "Infraestructura de corretaje con licencia FSA para marcas MT4/MT5",
+    "subtitle": "Conectividad y hosting • Liquidez y bridge • Onboarding KYC/AML • Riesgo e informes • PAMM • White-label",
+    "description": "Milton Global ofrece la infraestructura integral para lanzar y escalar un bróker. Desde la conectividad de plataformas y la liquidez hasta el compliance y la operación, todo en un único stack integrado.",
     "ctaPrimary": "Solicitar Reunión IFX EXPO",
-    "ctaSecondary": "Explorar Nuestros Servicios"
+    "ctaSecondary": "Explorar Nuestros Servicios",
+    "ifxBanner": {
+      "event": "IFX EXPO Asia 2025",
+      "date": "26-28 Oct, Hong Kong",
+      "cta": "¡Nos vemos allí!"
+    }
   },
   "metrics": {
-    "yearsInBusiness": "Años",
-    "yearsInBusinessSub": "Fundado en 2016",
-    "dailyVolume": "Volumen Diario",
-    "dailyVolumeSub": "Negociación Media",
-    "institutionalClients": "Clientes Institucionales",
-    "institutionalClientsSub": "Socios Globales",
-    "uptime": "Disponibilidad del Sistema",
-    "uptimeSub": "Media 2024"
+    "a": {
+      "value": "SD040",
+      "label": "Licencia FSA",
+      "sub": "Licenciado y Regulado"
+    },
+    "b": {
+      "value": "2016",
+      "label": "Fundación",
+      "sub": "más de 9 años"
+    },
+    "c": {
+      "value": "2",
+      "label": "Marcas operadas",
+      "sub": "Milton Prime y Milton Markets"
+    },
+    "d": {
+      "value": "3",
+      "label": "Idiomas",
+      "sub": "EN / ES / JA"
+    }
   },
   "about": {
     "title": "Infraestructura Institucional, Operaciones Minoristas",

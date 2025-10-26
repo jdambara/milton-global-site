@@ -5,72 +5,11 @@ import Button from '@/components/ui/Button';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Tag from '@/components/ui/Tag';
 import { generateOrganizationSchema, generateProductSchema, generateFAQSchema, generateBreadcrumbSchema } from '@/lib/seo-utils';
+import { genMeta } from '@/lib/seo/generate';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }): Promise<Metadata> {
   const { locale } = await params;
-  
-  const titles = {
-    en: 'Ultency Liquidity Provider | MetaQuotes Approved - Milton Global',
-    es: 'Proveedor de Liquidez Ultency | Aprobado por MetaQuotes - Milton Global',
-    ja: 'ウルテンシー流動性プロバイダー | MetaQuotes認定 - ミルトングローバル'
-  };
-  
-  const descriptions = {
-    en: 'Milton Global is an approved liquidity provider on MetaQuotes Ultency Matching Engine, delivering ultra-low latency execution and institutional liquidity to brokers worldwide.',
-    es: 'Milton Global es un proveedor de liquidez aprobado en el Motor de Emparejamiento Ultency de MetaQuotes, ofreciendo ejecución de ultra baja latencia y liquidez institucional a brokers en todo el mundo.',
-    ja: 'ミルトングローバルはMetaQuotesウルテンシーマッチングエンジンの認定流動性プロバイダーとして、世界中のブローカーに超低レイテンシー執行と機関投資家グレードの流動性を提供しています。'
-  };
-  
-  const keywords = {
-    en: 'Ultency, MetaQuotes Ultency, liquidity provider, Ultency matching engine, ultra-low latency, institutional liquidity, MetaTrader 5 liquidity, A-Book execution, forex liquidity, MT5 liquidity, Ultency gateway, MetaQuotes approved',
-    es: 'Ultency, MetaQuotes Ultency, proveedor de liquidez, motor de emparejamiento Ultency, ultra baja latencia, liquidez institucional, liquidez MetaTrader 5, ejecución A-Book, liquidez forex, liquidez MT5, gateway Ultency, aprobado MetaQuotes',
-    ja: 'ウルテンシー, MetaQuotes ウルテンシー, 流動性プロバイダー, ウルテンシーマッチングエンジン, 超低レイテンシー, 機関投資家流動性, MetaTrader 5 流動性, A-Book執行, フォレックス流動性, MT5流動性, ウルテンシーゲートウェイ, MetaQuotes認定'
-  };
-  
-  const baseUrl = 'https://miltonglobal.com';
-  const canonicalUrl = locale === 'en' 
-    ? `${baseUrl}/ultency-liquidity-provider`
-    : `${baseUrl}/${locale}/ultency-liquidity-provider`;
-
-  return {
-    title: titles[locale],
-    description: descriptions[locale],
-    keywords: keywords[locale],
-    alternates: {
-      canonical: canonicalUrl,
-      languages: {
-        'en': `${baseUrl}/ultency-liquidity-provider`,
-        'es': `${baseUrl}/es/ultency-liquidity-provider`,
-        'ja': `${baseUrl}/ja/ultency-liquidity-provider`,
-        'x-default': `${baseUrl}/ultency-liquidity-provider`,
-      },
-    },
-    openGraph: {
-      title: titles[locale],
-      description: descriptions[locale],
-      type: 'website',
-      url: canonicalUrl,
-      locale: locale === 'en' ? 'en_US' : locale === 'es' ? 'es_ES' : 'ja_JP',
-      alternateLocale: ['en_US', 'es_ES', 'ja_JP'].filter(l => l !== (locale === 'en' ? 'en_US' : locale === 'es' ? 'es_ES' : 'ja_JP')),
-      siteName: 'Milton Global',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: titles[locale],
-      description: descriptions[locale],
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-  };
+  return genMeta('/ultency-liquidity-provider', locale);
 }
 
 export default async function UltencyPage({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }) {

@@ -6,49 +6,11 @@ import { lp, type L } from '@/lib/seo/paths';
 import { useTranslations, useLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import { genMeta } from '@/lib/seo/generate';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'fsaPage.meta' });
-  
-  const url = locale === 'en' 
-    ? 'https://miltonglobal.com/fsa-regulation'
-    : `https://miltonglobal.com/${locale}/fsa-regulation`;
-  
-  return {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
-    alternates: {
-      canonical: url,
-      languages: {
-        'en': 'https://miltonglobal.com/fsa-regulation',
-        'es': 'https://miltonglobal.com/es/fsa-regulation',
-        'ja': 'https://miltonglobal.com/ja/fsa-regulation',
-      },
-    },
-    openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: url,
-      siteName: 'Milton Global',
-      type: 'website',
-      images: [
-        {
-          url: '/images/fsa-logo.png',
-          width: 1200,
-          height: 630,
-          alt: 'FSA Seychelles - Milton Global License SD040',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['/images/fsa-logo.png'],
-    },
-  };
+  return genMeta('/fsa-regulation', locale);
 }
 
 function FSARegulationContent() {

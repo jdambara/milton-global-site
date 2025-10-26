@@ -28,21 +28,38 @@
     }
   },
   "hero": {
-    "title": "現代トレーディングのためのグローバルインフラ",
-    "subtitle": "金融サービスの立ち上げと拡大のための完全なエコシステム",
-    "description": "テクノロジー、流動性から規制、オペレーションまで、ミルトングローバルはブローカーがグローバルに競争するために必要なすべてを提供します。新しいベンチャーを立ち上げる場合でも、既存のオペレーションを拡大する場合でも、成功する金融ビジネスを支える統合インフラを提供します。",
+    "title": "MT4/MT5 ブランドのための FSA ライセンス基盤",
+    "subtitle": "接続・ホスティング／流動性・ブリッジ／KYC・AML／リスク・レポート／PAMM／ホワイトラベル",
+    "description": "ミルトングローバルは、ブローカーの立ち上げと拡大に必要な基盤を一気通貫で提供します。プラットフォーム接続と流動性からコンプライアンス、運用まで、統合スタックで支えます。",
     "ctaPrimary": "IFX EXPO面談のご予約",
-    "ctaSecondary": "サービス一覧を見る"
+    "ctaSecondary": "サービス一覧を見る",
+    "ifxBanner": {
+      "event": "IFX EXPO Asia 2025",
+      "date": "10月26-28日 香港",
+      "cta": "現地でお会いしましょう！"
+    }
   },
   "metrics": {
-    "yearsInBusiness": "年",
-    "yearsInBusinessSub": "2016年創業",
-    "dailyVolume": "日次取引高",
-    "dailyVolumeSub": "平均取引量",
-    "institutionalClients": "機関投資家クライアント",
-    "institutionalClientsSub": "グローバルパートナー数",
-    "uptime": "システム稼働率",
-    "uptimeSub": "2024年平均値"
+    "a": {
+      "value": "SD040",
+      "label": "FSA 証券ディーラー",
+      "sub": "ライセンス取得・規制対象"
+    },
+    "b": {
+      "value": "2016",
+      "label": "設立",
+      "sub": "運営9年以上"
+    },
+    "c": {
+      "value": "2",
+      "label": "運営ブランド",
+      "sub": "Milton Prime / Milton Markets"
+    },
+    "d": {
+      "value": "3",
+      "label": "言語",
+      "sub": "EN / ES / JA"
+    }
   },
   "about": {
     "title": "ミルトングローバル",

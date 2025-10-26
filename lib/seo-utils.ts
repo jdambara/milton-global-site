@@ -106,21 +106,40 @@ export function generateProductSchema(locale: string, product: {
 export function generateArticleSchema(locale: string, article: {
   title: string;
   description: string;
-  author: string;
+  author: {
+    name: string;
+    type: 'person' | 'organization';
+    title?: string;
+    organization?: string;
+  };
   datePublished: string;
   dateModified?: string;
   image?: string;
   url: string;
 }) {
+  const authorSchema = article.author.type === 'person' 
+    ? {
+        '@type': 'Person',
+        name: article.author.name,
+        ...(article.author.title && { jobTitle: article.author.title }),
+        ...(article.author.organization && { 
+          worksFor: {
+            '@type': 'Organization',
+            name: article.author.organization
+          }
+        })
+      }
+    : {
+        '@type': 'Organization',
+        name: article.author.name,
+      };
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    author: {
-      '@type': 'Person',
-      name: article.author,
-    },
+    author: authorSchema,
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
     publisher: {
@@ -246,17 +265,30 @@ export function generateMetaTags(locale: string, page: {
   url: string;
   image?: string;
   type?: string;
+  author?: {
+    name: string;
+    type: 'person' | 'organization';
+    title?: string;
+    organization?: string;
+  };
 }) {
   const localeConfig = seoConfig.locales[locale as keyof typeof seoConfig.locales] || seoConfig.locales.en;
   const defaultKeywords = seoConfig.keywords[locale as keyof typeof seoConfig.keywords] || seoConfig.keywords.en;
+  const companyName = typeof seoConfig.company.name === 'string' ? seoConfig.company.name : seoConfig.company.name[locale as keyof typeof seoConfig.company.name] || seoConfig.company.name.en;
+  const companyLegalName = typeof seoConfig.company.legalName === 'string' ? seoConfig.company.legalName : seoConfig.company.legalName[locale as keyof typeof seoConfig.company.legalName] || seoConfig.company.legalName.en;
+  const siteName = typeof seoConfig.siteName === 'string' ? seoConfig.siteName : seoConfig.siteName[locale as keyof typeof seoConfig.siteName] || seoConfig.siteName.en;
   
   return {
     title: page.title,
     description: page.description,
     keywords: page.keywords ? [...page.keywords, ...defaultKeywords.secondary].join(', ') : [...defaultKeywords.primary, ...defaultKeywords.secondary].join(', '),
-    authors: [{ name: seoConfig.company.name }],
-    creator: seoConfig.company.name,
-    publisher: seoConfig.company.legalName,
+    authors: page.author ? [{ 
+      name: page.author.type === 'person' && page.author.title 
+        ? `${page.author.name}, ${page.author.title}` 
+        : page.author.name 
+    }] : [{ name: companyName }],
+    creator: page.author ? page.author.name : companyName,
+    publisher: companyLegalName,
     formatDetection: seoConfig.defaultMeta.formatDetection,
     metadataBase: new URL(seoConfig.siteUrl),
     alternates: {
@@ -274,7 +306,7 @@ export function generateMetaTags(locale: string, page: {
       locale: localeConfig.lang,
       alternateLocale: ['en-US', 'es-ES', 'ja-JP'].filter(l => l !== localeConfig.lang),
       url: page.url,
-      siteName: seoConfig.siteName,
+      siteName: siteName,
       images: [
         {
           url: page.image || seoConfig.defaultImage,

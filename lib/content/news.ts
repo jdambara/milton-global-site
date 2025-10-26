@@ -1,87 +1,216 @@
+export interface NewsAuthor {
+  name: string;
+  type: 'person' | 'organization';
+  title?: string; // For person authors (e.g., "Managing Partner")
+  organization?: string; // For person authors, which organization they represent
+}
+
 export interface News {
   slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
+  title: {
+    en: string;
+    es: string;
+    ja: string;
+  };
+  excerpt: {
+    en: string;
+    es: string;
+    ja: string;
+  };
+  content: {
+    en: string;
+    es: string;
+    ja: string;
+  };
   date: string;
-  author: string;
+  author: NewsAuthor;
   category: 'announcement' | 'partnership' | 'milestone' | 'regulatory';
 }
 
 export const newsItems: News[] = [
   {
     slug: 'milton-global-approved-ultancy-provider',
-    title: 'Milton Global Approved as Ultancy Liquidity Provider',
-    excerpt: 'We are proud to announce our approval as an official liquidity provider on the MetaQuotes Ultancy Matching Engine platform.',
+    title: {
+      en: 'Milton Global Listed as Liquidity Provider in Ultency Matching Engine (LD4)',
+      es: 'Milton Global Listado como Proveedor de Liquidez en Ultency Matching Engine (LD4)',
+      ja: 'Ultency Matching Engine（LD4）でミルトングローバルが流動性プロバイダーとして利用可能に'
+    },
+    excerpt: {
+      en: 'Brokers using Ultency can now add Milton Global as a venue within their MT5 setup and manage routing, markups, and risk according to their framework.',
+      es: 'Los brokers que utilizan Ultency ahora pueden agregar Milton Global como un venue dentro de su configuración MT5 y gestionar el enrutamiento, márgenes y riesgo según su marco de trabajo.',
+      ja: 'Ultency を利用するMT5ブローカーは、ミルトングローバルを既存の設定に追加し、銘柄やクライアントグループ単位でのマークアップやルーティング、リスク管理を行えます。'
+    },
     category: 'announcement',
-    author: 'Milton Global',
-    date: '2025-01-20',
-    content: `
-# Milton Global Approved as Ultancy Liquidity Provider
+    author: {
+      name: 'Milton Global Editorial Team',
+      type: 'organization'
+    },
+    date: '2025-09-24',
+    content: {
+      en: `
+# Milton Global Listed as Liquidity Provider in Ultency Matching Engine (LD4)
 
-**January 20, 2025** - Milton Global Ltd is pleased to announce our approval as an official liquidity provider on the MetaQuotes Ultancy Matching Engine platform. This milestone represents a significant advancement in our ability to deliver institutional-grade liquidity to brokers worldwide.
+**September 24, 2025** - Milton Global Ltd is pleased to announce that we are now available as a liquidity provider within the [Ultency Matching Engine](https://www.ultency.com) for MetaTrader 5. This listing enables brokers using Ultency to route flow to Milton Global with low-latency connectivity from London LD4 and other supported hubs.
 
-## About the Approval
+## Press Release
 
-MetaQuotes, the developer of the industry-leading MetaTrader 5 platform, has approved Milton Global as a liquidity provider on their revolutionary Ultancy Matching Engine. This approval follows a comprehensive evaluation process that assessed our:
+Brokers using Ultency can now add Milton Global as a venue within their MT5 setup and manage routing, markups, and risk according to their framework.
 
-- Technical infrastructure and execution capabilities
-- Regulatory standing and compliance framework
-- Liquidity depth and pricing competitiveness
-- Operational reliability and uptime guarantees
-- Risk management systems and procedures
+Milton Global is now available as a liquidity provider within the Ultency Matching Engine for MetaTrader 5. This listing enables brokers using Ultency to route flow to Milton Global with low-latency connectivity from London LD4 and other supported hubs. Learn more about our [Ultency liquidity provider services](/ultency-liquidity-provider).
 
-## What This Means for Brokers
+Ultency allows brokers to aggregate quotes, define routing rules, and control markups per instrument and client group. With Milton Global in the catalog, brokers can add our pricing as a new venue inside their existing Ultency setup and manage A/B/C-book logic according to their risk framework.
 
-As an approved Ultancy liquidity provider, Milton Global now offers brokers:
+"Ultency offers a straightforward path to consistent pricing and reliable fills with tight MT5 integration. We are pleased to be available to brokers who prioritize stability and efficient connectivity."
 
-### Ultra-Low Latency Execution
-Our co-located infrastructure delivers sub-10ms execution times through the Ultancy platform, ensuring traders experience no delays or slippage during normal market conditions.
+— Hironobu Kawashima, Managing Partner, Milton Global
 
-### Deep Institutional Liquidity
-Access Tier 1 institutional liquidity across all major asset classes including forex, indices, commodities, and cryptocurrencies.
+## Highlights
 
-### Transparent Pricing
-Clean, transparent pricing with no hidden markups. Our spreads are competitive and our execution is fully transparent.
+- Available in the Ultency LP catalog for MT5 brokers
+- Low latency connectivity from LD4 and additional supported hubs
+- Per-instrument markups and client-group routing
+- Fits A, B, and C-book operating models
 
-### 24/7 Availability
-Round-the-clock liquidity with 99.99% uptime guaranteed by our redundant infrastructure and failover systems.
+This enables Ultency brokers to add our pricing and execution without major configuration changes, implementing routing and risk management aligned with their operational policies.
 
-### FSA Regulatory Credibility
-As a Seychelles FSA-regulated broker (License SD040), we bring regulatory credibility and compliance expertise to every partnership.
+## What is Ultency Matching Engine?
 
-## Our Commitment
+[Ultency](https://www.ultency.com) is a MT5-native matching and routing layer that aggregates quotes from multiple liquidity providers, applies per-instrument and client-group rules, and executes using broker-defined A/B/C-book policies. Brokers typically deploy it close to trading hubs (e.g., LD4) to minimize latency.
 
-"Being approved as an Ultancy liquidity provider reinforces our commitment to delivering institutional-grade infrastructure to the forex and CFD industry," said the Milton Global team. "Ultancy represents the future of broker infrastructure, and we're excited to participate in this ecosystem."
+## Connectivity and Routing
 
-## Technical Advantages
+With Milton Global in the Ultency catalog, brokers can add our venue to their existing setup, apply instrument-level markups, and enforce price-sanity and routing filters. Availability from LD4 supports low-latency quote/exec paths; additional hubs can be discussed during onboarding.
 
-Our Ultancy integration leverages:
+## Onboarding Flow
 
-- **Native MT5 Integration**: Seamless connectivity through MetaTrader 5's internal protocols
-- **Geographic Flexibility**: Server locations optimized for LP proximity
-- **Advanced Risk Management**: Support for A-Book, B-Book, and C-Book execution models
-- **Real-Time Monitoring**: Comprehensive dashboards for performance tracking
+1. Request test credentials from our technical desk
+2. Add Milton Global as a venue in Ultency and map symbols
+3. Set markups/routing by instrument or client group
+4. Validate fills in demo and go live
 
 ## About Milton Global
 
-Milton Global Ltd is a Seychelles FSA-regulated CFD broker (License SD040) operating two brands: Milton Prime for institutional clients and Milton Markets for retail traders. We specialize in providing institutional-grade trading infrastructure, liquidity solutions, and advanced execution technology.
+Milton Global Ltd. is a liquidity provider and trading brand operator serving regulated brokers and professional counterparties. Milton Global Ltd. is regulated by the Seychelles Financial Services Authority as a Securities Dealer (License No. SD040). This notice is informational and does not constitute an offer where prohibited.
 
-## About Ultancy
+## Technical Contact
 
-Ultancy is MetaQuotes' ultra-low latency matching engine designed specifically for MetaTrader 5. The platform enables brokers to connect to multiple liquidity providers simultaneously, aggregate prices in real-time, and implement sophisticated risk management strategies - all within the native MT5 environment.
-
-## Contact Information
-
-Brokers interested in accessing Milton Global's liquidity through Ultancy can contact our institutional liquidity team at liquidity@miltonglobal.com
-
-For more information about Ultancy, visit [www.ultency.com](https://www.ultency.com)
+For integration details or test access: technical-administrator@miltonglobal.com
 
 ---
 
 **About Milton Global Ltd**  
-Milton Global Ltd is a Seychelles FSA-regulated CFD broker (License SD040) providing institutional-grade trading solutions through Milton Prime and Milton Markets brands. As an approved Ultancy liquidity provider, we deliver ultra-low latency execution and deep institutional liquidity to brokers worldwide.
-    `
+Milton Global Ltd is a Seychelles FSA-regulated CFD broker (License SD040) providing institutional-grade trading solutions through [Milton Prime](/milton-prime) and [Milton Markets](/milton-markets) brands. As an approved Ultency liquidity provider, we deliver ultra-low latency execution and deep institutional liquidity to brokers worldwide. [Learn more about Milton Global](/about).
+      `,
+      es: `
+# Milton Global Listado como Proveedor de Liquidez en Ultency Matching Engine (LD4)
+
+**24 de septiembre de 2025** - Milton Global Ltd se complace en anunciar que ahora estamos disponibles como proveedor de liquidez dentro del [Ultency Matching Engine](https://www.ultency.com) para MetaTrader 5. Esta inclusión permite a los brokers que utilizan Ultency enrutar flujo hacia Milton Global con conectividad de baja latencia desde Londres LD4 y otros hubs soportados.
+
+## Comunicado de Prensa
+
+Los brokers que utilizan Ultency ahora pueden agregar Milton Global como un venue dentro de su configuración MT5 y gestionar el enrutamiento, márgenes y riesgo según su marco de trabajo.
+
+Milton Global ahora está disponible como proveedor de liquidez dentro del Ultency Matching Engine para MetaTrader 5. Esta inclusión permite a los brokers que utilizan Ultency enrutar flujo hacia Milton Global con conectividad de baja latencia desde Londres LD4 y otros hubs soportados. Más información sobre nuestros [servicios de proveedor de liquidez Ultency](/ultency-liquidity-provider).
+
+Ultency permite a los brokers agregar cotizaciones, definir reglas de enrutamiento y controlar márgenes por instrumento y grupo de clientes. Con Milton Global en el catálogo, los brokers pueden agregar nuestros precios como un nuevo venue dentro de su configuración Ultency existente y gestionar la lógica A/B/C-book según su marco de riesgo.
+
+"Ultency ofrece un camino directo hacia precios consistentes y ejecuciones confiables con integración estrecha de MT5. Nos complace estar disponibles para brokers que priorizan la estabilidad y conectividad eficiente."
+
+— Hironobu Kawashima, Managing Partner, Milton Global
+
+## Destacados
+
+- Disponible en el catálogo LP de Ultency para brokers MT5
+- Conectividad de baja latencia desde LD4 y hubs adicionales soportados
+- Márgenes por instrumento y enrutamiento por grupo de clientes
+- Se adapta a modelos operativos A, B y C-book
+
+Esto permite a los brokers de Ultency agregar nuestros precios y ejecución sin cambios de configuración importantes, implementando enrutamiento y gestión de riesgo alineados con sus políticas operativas.
+
+## ¿Qué es Ultency Matching Engine?
+
+[Ultency](https://www.ultency.com) es una capa de matching y enrutamiento nativa de MT5 que agrega cotizaciones de múltiples proveedores de liquidez, aplica reglas por instrumento y grupo de clientes, y ejecuta usando políticas A/B/C-book definidas por el broker. Los brokers típicamente lo despliegan cerca de hubs de trading (ej. LD4) para minimizar la latencia.
+
+## Conectividad y Enrutamiento
+
+Con Milton Global en el catálogo de Ultency, los brokers pueden agregar nuestro venue a su configuración existente, aplicar márgenes a nivel de instrumento y hacer cumplir filtros de sanidad de precios y enrutamiento. La disponibilidad desde LD4 soporta rutas de cotización/ejecución de baja latencia; hubs adicionales pueden ser discutidos durante el onboarding.
+
+## Flujo de Onboarding
+
+1. Solicitar credenciales de prueba a nuestro escritorio técnico
+2. Agregar Milton Global como venue en Ultency y mapear símbolos
+3. Establecer márgenes/enrutamiento por instrumento o grupo de clientes
+4. Validar ejecuciones en demo y pasar a producción
+
+## Acerca de Milton Global
+
+Milton Global Ltd. es un proveedor de liquidez y operador de marca de trading que sirve a brokers regulados y contrapartes profesionales. Milton Global Ltd. está regulado por la Autoridad de Servicios Financieros de Seychelles como Securities Dealer (Licencia No. SD040). Este aviso es informativo y no constituye una oferta donde esté prohibido.
+
+## Contacto Técnico
+
+Para detalles de integración o acceso de prueba: technical-administrator@miltonglobal.com
+
+---
+
+**Acerca de Milton Global Ltd**  
+Milton Global Ltd es un broker CFD regulado por FSA de Seychelles (Licencia SD040) que proporciona soluciones de trading de grado institucional a través de las marcas [Milton Prime](/milton-prime) y [Milton Markets](/milton-markets). Como proveedor de liquidez aprobado por Ultency, entregamos ejecución de ultra-baja latencia y liquidez institucional profunda a brokers en todo el mundo. [Conozca más sobre Milton Global](/about).
+      `,
+      ja: `
+# Ultency Matching Engine（LD4）でミルトングローバルが流動性プロバイダーとして利用可能に
+
+**2025年9月24日** - ミルトングローバルは、MetaTrader 5向け[Ultency Matching Engine](https://www.ultency.com)の流動性プロバイダーとして利用可能になったことを発表いたします。この掲載により、Ultencyを利用するブローカーは、ロンドンLD4およびその他のサポート拠点からの低遅延接続でミルトングローバルにフローをルーティングできます。
+
+## プレスリリース
+
+Ultency を利用するMT5ブローカーは、ミルトングローバルを既存の設定に追加し、銘柄やクライアントグループ単位でのマークアップやルーティング、リスク管理を行えます。
+
+ミルトングローバルは Ultency Matching Engine の流動性プロバイダーとして掲載されました。LD4などの拠点から低遅延で接続でき、銘柄別やクライアントグループ別のポリシー設定を通じて、マークアップやルーティングを細かく管理できます。既存のUltency環境に当社の価格配信と約定先を組み込み、Aブック・Bブック・Cブックの運用方針に合わせて活用いただけます。[Ultency流動性プロバイダーサービス](/ultency-liquidity-provider)の詳細。
+
+「Ultency は MT5 に密接に統合された安定的な接続経路を提供します。安定した価格と信頼性の高い約定を重視するブローカーの皆さまに選択肢を提供できることを嬉しく思います。」
+
+— カワシマ ヒロノブ（Hironobu Kawashima）｜ミルトングローバル マネージング・パートナー
+
+## 主なポイント
+
+- Ultency のLPカタログに掲載
+- LD4 からの低遅延接続
+- 銘柄別マークアップとクライアントグループ別ルーティング
+- Aブック・Bブック・Cブックの運用に対応
+
+これにより、Ultency を利用中のブローカーは既存設定を大きく変えずに当社の価格配信と約定先を追加でき、運用方針に沿ったルーティングとリスク管理を実装できます。
+
+## Ultency Matching Engine について
+
+[Ultency](https://www.ultency.com) は MT5 と緊密に連携するマッチング／ルーティング基盤です。複数 LP の見積りを集約し、銘柄別・クライアントグループ別のポリシーを適用して、ブローカーの運用方針（A/B/C ブック）に沿って約定させます。レイテンシ低減のため、LD4 などの取引ハブ近接で運用されるケースが一般的です。
+
+## 接続とルーティング
+
+ミルトングローバルを Ultency のカタログに追加することで、既存設定のまま当社の配信・約定先を組み込めます。銘柄単位のマークアップ、価格サニティチェック、ルーティング条件を設定でき、LD4 からの低遅延パスに対応します。その他の拠点はオンボーディング時にご相談ください。
+
+## オンボーディング手順
+
+1. 技術窓口へテスト用の接続情報をリクエスト
+2. Ultency で当社を約定先として追加し、シンボルをマッピング
+3. 銘柄／グループ単位でマークアップ・ルーティングを設定
+4. テスト環境で約定を検証し、本番化
+
+## ミルトングローバルについて
+
+ミルトングローバルは、規制ブローカーおよびプロ向けの流動性提供と取引ブランド運営を行っています。Seychelles Financial Services Authority（FSA） の Securities Dealer（ライセンス番号：SD040） として登録されています。※本記事は告知目的であり、法令により提供が制限される地域における勧誘を意図するものではありません。
+
+## 技術窓口
+
+technical-administrator@miltonglobal.com
+
+---
+
+**ミルトングローバルについて**  
+ミルトングローバルは、Seychelles FSA規制のCFDブローカー（ライセンスSD040）として、[Milton Prime](/milton-prime)および[Milton Markets](/milton-markets)ブランドを通じて機関投資家レベルの取引ソリューションを提供しています。承認されたUltency流動性プロバイダーとして、超低遅延実行と深い機関投資家流動性を世界中のブローカーに提供しています。[ミルトングローバルについて](/about)の詳細。
+      `
+    }
+  }
+  // Temporarily hidden articles:
+  /*
   },
   {
     slug: 'fsa-license-sd040-granted',
@@ -306,6 +435,7 @@ Milton Global Ltd is a Seychelles FSA-regulated CFD broker (License SD040) speci
 For more information about Milton Global and our brands, visit [miltonglobal.com](https://miltonglobal.com) or contact us at info@miltonglobal.com.
     `
   }
+  */
 ];
 
 export function getNewsBySlug(slug: string): News | undefined {
@@ -320,6 +450,34 @@ export function getNewsByCategory(category: string): News[] {
   return newsItems
     .filter(news => news.category === category)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+// Helper functions for localized content
+export function getLocalizedNews(news: News, locale: 'en' | 'es' | 'ja') {
+  return {
+    ...news,
+    title: news.title[locale],
+    excerpt: news.excerpt[locale],
+    content: news.content[locale],
+    author: news.author
+  };
+}
+
+// Helper function to get author display name
+export function getAuthorDisplayName(author: NewsAuthor): string {
+  if (author.type === 'person' && author.title) {
+    return `${author.name}, ${author.title}`;
+  }
+  return author.name;
+}
+
+export function getAllLocalizedNews(locale: 'en' | 'es' | 'ja') {
+  return getAllNews().map(news => getLocalizedNews(news, locale));
+}
+
+export function getLocalizedNewsBySlug(slug: string, locale: 'en' | 'es' | 'ja') {
+  const news = getNewsBySlug(slug);
+  return news ? getLocalizedNews(news, locale) : undefined;
 }
 
 

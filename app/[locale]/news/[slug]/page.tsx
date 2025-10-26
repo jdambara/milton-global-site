@@ -5,11 +5,12 @@ import { getTranslations } from 'next-intl/server';
 import Card from '@/components/ui/Card';
 import Tag from '@/components/ui/Tag';
 import Button from '@/components/ui/Button';
-import { getNewsBySlug, getAllNews } from '@/lib/content/news';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
+import { getLocalizedNewsBySlug, getAllLocalizedNews, getAuthorDisplayName } from '@/lib/content/news';
 import { generateMetaTags, generateArticleSchema } from '@/lib/seo-utils';
 
 export async function generateStaticParams() {
-  const news = getAllNews();
+  const news = getAllLocalizedNews('en'); // Use English as base for slugs
   const locales = ['en', 'es', 'ja'];
   
   return locales.flatMap((locale) =>
@@ -26,7 +27,7 @@ export async function generateMetadata({
   params: Promise<{ locale: 'en' | 'es' | 'ja'; slug: string }>;
 }): Promise<Metadata> {
   const { slug, locale } = await params;
-  const news = getNewsBySlug(slug);
+  const news = getLocalizedNewsBySlug(slug, locale);
   
   if (!news) {
     return {
@@ -43,6 +44,7 @@ export async function generateMetadata({
     url: baseUrl,
     type: 'article',
     image: `https://miltonglobal.com/images/news/${slug}-og.jpg`,
+    author: news.author,
   });
 }
 
@@ -53,13 +55,13 @@ export default async function NewsDetailPage({
 }) {
   const { slug, locale } = await params;
   const t = await getTranslations({ locale, namespace: 'news' });
-  const news = getNewsBySlug(slug);
+  const news = getLocalizedNewsBySlug(slug, locale);
   
   if (!news) {
     notFound();
   }
 
-  const relatedNews = getAllNews()
+  const relatedNews = getAllLocalizedNews(locale)
     .filter(n => n.slug !== news.slug)
     .slice(0, 2);
 
@@ -67,9 +69,9 @@ export default async function NewsDetailPage({
     return t(`categories.${category}` as any) || category;
   };
 
-  const getCategoryColor = (category: string): 'regulation' | 'ultency' | 'forex' | 'default' => {
-    const colors: Record<string, 'regulation' | 'ultency' | 'forex' | 'default'> = {
-      'announcement': 'ultency',
+  const getCategoryColor = (category: string): 'regulation' | 'ultency' | 'forex' | 'announcement' | 'default' => {
+    const colors: Record<string, 'regulation' | 'ultency' | 'forex' | 'announcement' | 'default'> = {
+      'announcement': 'announcement',
       'partnership': 'forex',
       'milestone': 'regulation',
       'regulatory': 'regulation'
@@ -97,48 +99,55 @@ export default async function NewsDetailPage({
       />
       
       {/* News Header */}
-      <section className="section bg-gradient-to-b from-green-50 to-white">
+      <section className="py-6 sm:py-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <Link 
-              href={`/${locale === 'en' ? '' : locale + '/'}news`}
-              className="inline-flex items-center text-body text-gray-600 hover:text-brand-red mb-6 transition-colors"
-            >
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              {t('backToNews')}
-            </Link>
+            <div className="mb-4">
+              <Breadcrumbs locale={locale} />
+            </div>
 
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center space-x-3 mb-3">
               <Tag variant={getCategoryColor(news.category)}>
                 {getCategoryLabel(news.category)}
               </Tag>
               <span className="text-caption text-gray-500">
-                {new Date(news.date).toLocaleDateString(locale, {
+                {new Date(news.date + 'T00:00:00').toLocaleDateString(locale, {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric'
                 })}
               </span>
+              <span className="text-gray-400">•</span>
+              <span className="text-caption text-gray-500">
+                {getAuthorDisplayName(news.author)}
+              </span>
             </div>
 
-            <h1 className="text-h1 md:text-[48px] md:leading-[56px] font-bold text-gray-900 mb-4">
+            <h1 className="text-h1 md:text-[48px] md:leading-[56px] font-bold text-gray-900 mb-3">
               {news.title}
             </h1>
 
-            <p className="text-body-large text-gray-600">
+            <p className="text-body-large text-gray-600 mb-6">
               {news.excerpt}
             </p>
+
+            {/* Hero Image */}
+            <div className="mb-6 rounded-lg overflow-hidden">
+              <img
+                src="/images/liquidity-provider-news-hero.png"
+                alt="Milton Global liquidity provider partnership announcement"
+                className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* News Content */}
-      <section className="section">
+      <section className="py-4 sm:py-6">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12">
+            <Card className="p-6 md:p-8">
               <article>
                 <div 
                   className="text-body text-gray-700 leading-relaxed space-y-6"
@@ -169,16 +178,16 @@ export default async function NewsDetailPage({
               </article>
 
               {/* Share */}
-              <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-small font-semibold text-gray-900 mb-1">{t('publishedBy')}</div>
-                    <div className="text-body text-gray-600">{news.author}</div>
+                    <div className="text-body text-gray-600">{getAuthorDisplayName(news.author)}</div>
                   </div>
                   <div>
                     <div className="text-small font-semibold text-gray-900 mb-1">{t('date')}</div>
                     <div className="text-body text-gray-600">
-                      {new Date(news.date).toLocaleDateString(locale, {
+                      {new Date(news.date + 'T00:00:00').toLocaleDateString(locale, {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
@@ -194,10 +203,10 @@ export default async function NewsDetailPage({
 
       {/* Related News */}
       {relatedNews.length > 0 && (
-        <section className="section bg-gray-50">
+        <section className="py-6 sm:py-8 bg-gray-50">
           <div className="container-custom">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-h2 font-bold text-gray-900 mb-8 text-center">{t('moreNews')}</h2>
+              <h2 className="text-h2 font-bold text-gray-900 mb-6 text-center">{t('moreNews')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedNews.map((related) => (
                   <Card key={related.slug} hover className="p-6">
@@ -211,12 +220,16 @@ export default async function NewsDetailPage({
                       <p className="text-small text-gray-600 mb-3">
                         {related.excerpt}
                       </p>
-                      <div className="text-caption text-gray-500">
-                        {new Date(related.date).toLocaleDateString(locale, {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
+                      <div className="flex items-center gap-2 text-caption text-gray-500">
+                        <span>
+                          {new Date(related.date + 'T00:00:00').toLocaleDateString(locale, {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </span>
+                        <span className="text-gray-400">•</span>
+                        <span>{getAuthorDisplayName(related.author)}</span>
                       </div>
                     </Link>
                   </Card>
@@ -228,22 +241,22 @@ export default async function NewsDetailPage({
       )}
 
       {/* CTA */}
-      <section className="section">
+      <section className="py-12 sm:py-16 border-t border-gray-200 bg-white">
         <div className="container-custom">
-          <Card className="p-12 bg-gradient-to-br from-green-600 to-green-800 text-white text-center max-w-4xl mx-auto rounded-[4px]">
-            <h2 className="text-h2 font-bold mb-4">{t('learnMore')}</h2>
-            <p className="text-body-large text-green-50 mb-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-h3 font-bold text-gray-900 mb-4">{t('learnMore')}</h2>
+            <p className="text-body-large text-gray-600 mb-8">
               {t('learnMoreDescription')}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href={`/${locale === 'en' ? '' : locale + '/'}about`} variant="primary">
                 {t('aboutUs')}
               </Button>
-              <Button href={`/${locale === 'en' ? '' : locale + '/'}contact`} variant="secondary">
+              <Button href={`/${locale === 'en' ? '' : locale + '/'}contact`} variant="dark">
                 {t('contactUs')}
               </Button>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
     </div>

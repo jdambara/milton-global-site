@@ -58,7 +58,7 @@ export const breadcrumbsConfig = {
   ],
 };
 
-export function generateBreadcrumbs(pathname: string, locale: string) {
+export function generateBreadcrumbs(pathname: string, locale: string, articleTitle?: string) {
   const segments = pathname.split('/').filter(Boolean);
   const translations = breadcrumbsConfig.translations[locale as keyof typeof breadcrumbsConfig.translations] || breadcrumbsConfig.translations.en;
   
@@ -86,12 +86,21 @@ export function generateBreadcrumbs(pathname: string, locale: string) {
     // Handle dynamic routes
     let label = translations[segment as keyof typeof translations] || segment;
     
-    // For article/news slugs, use a more readable format
+    // For article/news slugs, use the provided article title or fallback to readable format
     if (segments[index - 1] === 'articles' || segments[index - 1] === 'news') {
-      label = segment
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+      if (articleTitle) {
+        label = articleTitle;
+      } else {
+        label = segment
+          .split('-')
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ');
+      }
+      
+      // Truncate long titles for breadcrumb display (keep under 50 chars)
+      if (label.length > 50) {
+        label = label.substring(0, 47) + '...';
+      }
     }
     
     breadcrumbs.push({

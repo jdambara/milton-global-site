@@ -107,19 +107,23 @@
   
   /* Tag styles */
   .tag {
-    @apply inline-flex items-center px-2 py-1 rounded text-small font-medium;
+    @apply inline-flex items-center px-2 py-1 rounded text-small font-medium bg-gray-900 text-white;
   }
   
   .tag-forex {
-    @apply tag bg-blue-50 text-blue-700;
+    @apply tag bg-gray-900 text-white;
   }
   
   .tag-regulation {
-    @apply tag bg-green-50 text-green-700;
+    @apply tag bg-gray-900 text-white;
   }
   
   .tag-ultency {
-    @apply tag bg-purple-50 text-purple-700;
+    @apply tag bg-gray-900 text-white;
+  }
+  
+  .tag-announcement {
+    @apply tag bg-gray-900 text-white;
   }
 }
 

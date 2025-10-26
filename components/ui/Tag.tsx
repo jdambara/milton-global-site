@@ -1,6 +1,6 @@
 interface TagProps {
   children: React.ReactNode;
-  variant?: 'forex' | 'regulation' | 'ultency' | 'default';
+  variant?: 'forex' | 'regulation' | 'ultency' | 'announcement' | 'default';
   className?: string;
 }
 
@@ -11,6 +11,8 @@ export default function Tag({ children, variant = 'default', className = '' }: T
     ? 'tag-regulation'
     : variant === 'ultency'
     ? 'tag-ultency'
+    : variant === 'announcement'
+    ? 'tag-announcement'
     : 'tag bg-gray-100 text-gray-700';
   
   return (

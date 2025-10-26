@@ -12,16 +12,18 @@ interface BreadcrumbsProps {
   className?: string;
   showHome?: boolean;
   separator?: React.ReactNode;
+  articleTitle?: string;
 }
 
 export default function Breadcrumbs({ 
   locale, 
   className = '',
   showHome = true,
-  separator
+  separator,
+  articleTitle
 }: BreadcrumbsProps) {
   const pathname = usePathname();
-  const breadcrumbs = generateBreadcrumbs(pathname, locale);
+  const breadcrumbs = generateBreadcrumbs(pathname, locale, articleTitle);
   
   // Don't show breadcrumbs on homepage
   if (breadcrumbs.length <= 1) {

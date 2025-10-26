@@ -1,13 +1,25 @@
 export const seoConfig = {
-  siteName: 'Milton Global',
+  siteName: {
+    en: 'Milton Global',
+    es: 'Milton Global',
+    ja: 'ミルトン・グローバル'
+  },
   siteUrl: 'https://miltonglobal.com',
   defaultImage: '/images/og-image.png',
   twitterHandle: '@miltonglobal',
   
   // Company Information
   company: {
-    name: 'Milton Global',
-    legalName: 'Milton Global Ltd',
+    name: {
+      en: 'Milton Global',
+      es: 'Milton Global',
+      ja: 'ミルトン・グローバル'
+    },
+    legalName: {
+      en: 'Milton Global Ltd',
+      es: 'Milton Global Ltd',
+      ja: 'ミルトン・グローバル・リミテッド'
+    },
     license: 'SD040',
     regulator: 'Seychelles FSA',
     address: {

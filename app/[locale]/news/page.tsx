@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import Tag from '@/components/ui/Tag';
 import NewsletterForm from '@/components/NewsletterForm';
-import { getAllNews } from '@/lib/content/news';
+import { getAllLocalizedNews, getAuthorDisplayName } from '@/lib/content/news';
 import { generateMetaTags, generateArticleSchema } from '@/lib/seo-utils';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: 'en' | 'es' | 'ja' }> }): Promise<Metadata> {
@@ -29,15 +29,15 @@ export default async function NewsPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'news' });
-  const news = getAllNews();
+  const news = getAllLocalizedNews(locale);
 
   const getCategoryLabel = (category: string) => {
     return t(`categories.${category}` as any) || category;
   };
 
-  const getCategoryColor = (category: string): 'regulation' | 'ultency' | 'forex' | 'default' => {
-    const colors: Record<string, 'regulation' | 'ultency' | 'forex' | 'default'> = {
-      'announcement': 'ultency',
+  const getCategoryColor = (category: string): 'regulation' | 'ultency' | 'forex' | 'announcement' | 'default' => {
+    const colors: Record<string, 'regulation' | 'ultency' | 'forex' | 'announcement' | 'default'> = {
+      'announcement': 'announcement',
       'partnership': 'forex',
       'milestone': 'regulation',
       'regulatory': 'regulation'
@@ -104,7 +104,7 @@ export default async function NewsPage({
                           {getCategoryLabel(item.category)}
                         </Tag>
                         <span className="text-caption text-gray-500">
-                          {new Date(item.date).toLocaleDateString(locale, {
+                          {new Date(item.date + 'T00:00:00').toLocaleDateString(locale, {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric'

@@ -74,7 +74,7 @@ export default function LatestContentSection() {
                       {article.excerpt}
                     </p>
                     <div className="text-caption text-gray-500">
-                      {new Date(article.date).toLocaleDateString(locale, { 
+                      {new Date(article.date + 'T00:00:00').toLocaleDateString(locale, { 
                         year: 'numeric', 
                         month: 'long', 
                         day: 'numeric' 
@@ -111,7 +111,7 @@ export default function LatestContentSection() {
                       {item.excerpt}
                     </p>
                     <div className="text-caption text-gray-500">
-                      {new Date(item.date).toLocaleDateString(locale, { 
+                      {new Date(item.date + 'T00:00:00').toLocaleDateString(locale, { 
                         year: 'numeric', 
                         month: 'long', 
                         day: 'numeric' 

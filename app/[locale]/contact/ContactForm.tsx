@@ -103,7 +103,7 @@ export default function ContactForm() {
       
       {submitStatus === 'success' && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800">We received your inquiry, we'll be in touch with you soon.</p>
+          <p className="text-green-800">We received your inquiry, we&apos;ll be in touch with you soon.</p>
         </div>
       )}
       

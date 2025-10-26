@@ -39,7 +39,7 @@ export async function generateMetadata({
   return generateMetaTags(locale, {
     title: `${news.title} | Milton Global News`,
     description: news.excerpt,
-    keywords: `Milton Global news, ${news.title}, ${news.category}`,
+    keywords: [`Milton Global news`, news.title, news.category],
     url: baseUrl,
     type: 'article',
     image: `https://miltonglobal.com/images/news/${slug}-og.jpg`,

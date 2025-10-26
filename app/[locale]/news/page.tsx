@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: '
   return generateMetaTags(locale, {
     title: t('title'),
     description: t('description'),
-    keywords: t('keywords'),
+    keywords: t('keywords').split(', '),
     url: baseUrl,
     type: 'website',
   });

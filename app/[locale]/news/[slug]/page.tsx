@@ -1,0 +1,238 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import Card from '@/components/ui/Card';
+import Tag from '@/components/ui/Tag';
+import Button from '@/components/ui/Button';
+import { getNewsBySlug, getAllNews } from '@/lib/content/news';
+
+export async function generateStaticParams() {
+  const news = getAllNews();
+  const locales = ['en', 'es', 'ja'];
+  
+  return locales.flatMap((locale) =>
+    news.map((item) => ({
+      locale,
+      slug: item.slug,
+    }))
+  );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'es' | 'ja'; slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const news = getNewsBySlug(slug);
+  
+  if (!news) {
+    return {
+      title: 'News Not Found',
+    };
+  }
+
+  return {
+    title: `${news.title} | Milton Global News`,
+    description: news.excerpt,
+    openGraph: {
+      title: news.title,
+      description: news.excerpt,
+      type: 'article',
+      publishedTime: news.date,
+    },
+  };
+}
+
+export default async function NewsDetailPage({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'es' | 'ja'; slug: string }>;
+}) {
+  const { slug, locale } = await params;
+  const news = getNewsBySlug(slug);
+  
+  if (!news) {
+    notFound();
+  }
+
+  const relatedNews = getAllNews()
+    .filter(n => n.slug !== news.slug)
+    .slice(0, 2);
+
+  const getCategoryLabel = (category: string) => {
+    const labels: Record<string, string> = {
+      'announcement': 'Company Announcement',
+      'partnership': 'Partnership',
+      'milestone': 'Milestone',
+      'regulatory': 'Regulatory Update'
+    };
+    return labels[category] || category;
+  };
+
+  const getCategoryColor = (category: string): 'regulation' | 'ultency' | 'forex' | 'default' => {
+    const colors: Record<string, 'regulation' | 'ultency' | 'forex' | 'default'> = {
+      'announcement': 'ultency',
+      'partnership': 'forex',
+      'milestone': 'regulation',
+      'regulatory': 'regulation'
+    };
+    return colors[category] || 'default';
+  };
+
+  return (
+    <div className="min-h-screen">
+      {/* News Header */}
+      <section className="section bg-gradient-to-b from-green-50 to-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <Link 
+              href={`/${locale === 'en' ? '' : locale + '/'}news`}
+              className="inline-flex items-center text-body text-gray-600 hover:text-brand-red mb-6 transition-colors"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Back to News
+            </Link>
+
+            <div className="flex items-center space-x-3 mb-4">
+              <Tag variant={getCategoryColor(news.category)}>
+                {getCategoryLabel(news.category)}
+              </Tag>
+              <span className="text-caption text-gray-500">
+                {new Date(news.date).toLocaleDateString(locale, {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </span>
+            </div>
+
+            <h1 className="text-h1 md:text-[48px] md:leading-[56px] font-bold text-gray-900 mb-4">
+              {news.title}
+            </h1>
+
+            <p className="text-body-large text-gray-600">
+              {news.excerpt}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* News Content */}
+      <section className="section">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8 md:p-12">
+              <article>
+                <div 
+                  className="text-body text-gray-700 leading-relaxed space-y-6"
+                  dangerouslySetInnerHTML={{ __html: news.content.split('\n').map(line => {
+                    if (line.startsWith('# ')) {
+                      return `<h1 class="text-h1 font-bold text-gray-900 mt-8 mb-4">${line.substring(2)}</h1>`;
+                    } else if (line.startsWith('## ')) {
+                      return `<h2 class="text-h2 font-bold text-gray-900 mt-6 mb-3">${line.substring(3)}</h2>`;
+                    } else if (line.startsWith('### ')) {
+                      return `<h3 class="text-h3 font-semibold text-gray-900 mt-4 mb-2">${line.substring(4)}</h3>`;
+                    } else if (line.startsWith('**') && line.endsWith('**')) {
+                      return `<p class="font-bold text-gray-900">${line.replace(/\*\*/g, '')}</p>`;
+                    } else if (line.startsWith('- ')) {
+                      return `<li class="ml-4">${line.substring(2)}</li>`;
+                    } else if (line.startsWith('---')) {
+                      return '<hr class="my-8 border-gray-200" />';
+                    } else if (line.trim() === '') {
+                      return '<br />';
+                    } else {
+                      // Handle inline links and bold text
+                      const processed = line
+                        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-brand-red hover:underline">$1</a>')
+                        .replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold">$1</strong>');
+                      return `<p>${processed}</p>`;
+                    }
+                  }).join('') }}
+                />
+              </article>
+
+              {/* Share */}
+              <div className="mt-12 pt-8 border-t border-gray-200">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-small font-semibold text-gray-900 mb-1">Published by</div>
+                    <div className="text-body text-gray-600">{news.author}</div>
+                  </div>
+                  <div>
+                    <div className="text-small font-semibold text-gray-900 mb-1">Date</div>
+                    <div className="text-body text-gray-600">
+                      {new Date(news.date).toLocaleDateString(locale, {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Related News */}
+      {relatedNews.length > 0 && (
+        <section className="section bg-gray-50">
+          <div className="container-custom">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-h2 font-bold text-gray-900 mb-8 text-center">More News</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {relatedNews.map((related) => (
+                  <Card key={related.slug} hover className="p-6">
+                    <Link href={`/${locale === 'en' ? '' : locale + '/'}news/${related.slug}`}>
+                      <Tag variant={getCategoryColor(related.category)} className="mb-3">
+                        {getCategoryLabel(related.category)}
+                      </Tag>
+                      <h3 className="text-body-large font-semibold text-gray-900 mb-2 hover:text-brand-red transition-colors">
+                        {related.title}
+                      </h3>
+                      <p className="text-small text-gray-600 mb-3">
+                        {related.excerpt}
+                      </p>
+                      <div className="text-caption text-gray-500">
+                        {new Date(related.date).toLocaleDateString(locale, {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric'
+                        })}
+                      </div>
+                    </Link>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* CTA */}
+      <section className="section">
+        <div className="container-custom">
+          <Card className="p-12 bg-gradient-to-br from-green-600 to-green-800 text-white text-center max-w-4xl mx-auto">
+            <h2 className="text-h2 font-bold mb-4">Learn More About Milton Global</h2>
+            <p className="text-body-large text-green-100 mb-8">
+              Discover our FSA-regulated trading solutions and Ultency liquidity services.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <Button href={`/${locale === 'en' ? '' : locale + '/'}about`} variant="primary">
+                About Us
+              </Button>
+              <Button href={`/${locale === 'en' ? '' : locale + '/'}contact`} variant="secondary">
+                Contact Us
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
+    </div>
+  );
+}
+

@@ -1,0 +1,18 @@
+
+> milton-global-site@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.6
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.27:3000
+
+ ✓ Starting...
+ ✓ Ready in 1059ms
+ ✓ Compiled /middleware in 344ms (144 modules)
+ ○ Compiling /[locale] ...
+ ✓ Compiled /[locale] in 2.7s (802 modules)
+ HEAD / 404 in 3377ms
+ ✓ Compiled /[locale]/about in 393ms (788 modules)
+ HEAD /about 404 in 836ms
+ HEAD /es 404 in 42ms
+[?25h

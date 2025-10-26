@@ -1,0 +1,798 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "services": "サービス",
+    "miltonPrime": "ミルトンプライム",
+    "miltonMarkets": "ミルトンマーケッツ",
+    "fsaRegulation": "FSA規制",
+    "ultency": "ウルテンシー",
+    "articles": "記事",
+    "news": "ニュース",
+    "contact": "お問い合わせ",
+    "company": "企業情報",
+    "companyMenu": {
+      "about": "会社概要",
+      "miltonGlobal": "ミルトングローバル",
+      "fsaRegulation": "FSA規制",
+      "news": "ニュース",
+      "articles": "記事",
+      "brands": "ブランド",
+      "miltonPrime": "ミルトンプライム",
+      "miltonMarkets": "ミルトンマーケッツ"
+    },
+    "servicesMenu": {
+      "ourServices": "サービス一覧",
+      "ultency": "ウルテンシーゲートウェイ",
+      "viewAll": "すべてのサービスを見る"
+    }
+  },
+  "hero": {
+    "title": "現代トレーディングのためのグローバルインフラ",
+    "subtitle": "金融サービスの立ち上げと拡大のための完全なエコシステム",
+    "description": "テクノロジー、流動性から規制、オペレーションまで、ミルトングローバルはブローカーがグローバルに競争するために必要なすべてを提供します。新しいベンチャーを立ち上げる場合でも、既存のオペレーションを拡大する場合でも、成功する金融ビジネスを支える統合インフラを提供します。",
+    "ctaPrimary": "IFX EXPO面談のご予約",
+    "ctaSecondary": "サービス一覧を見る"
+  },
+  "metrics": {
+    "yearsInBusiness": "年",
+    "yearsInBusinessSub": "2016年創業",
+    "dailyVolume": "日次取引高",
+    "dailyVolumeSub": "平均取引量",
+    "institutionalClients": "機関投資家クライアント",
+    "institutionalClientsSub": "グローバルパートナー数",
+    "uptime": "システム稼働率",
+    "uptimeSub": "2024年平均値"
+  },
+  "about": {
+    "title": "ミルトングローバル",
+    "subtitle": "グローバル金融サービスの基盤を構築",
+    "description": "ミルトングローバルは、現代の金融サービスを支える完全なインフラエコシステムを提供しています。FSAライセンス保有企業（SD040）として、包括的なB2Bソリューションを運営しながら2つの成功したリテールブランドを管理しています。当社の統合プラットフォームは、テクノロジー、流動性、規制、オペレーションを金融の成功のための単一のシームレスな基盤に統合しています。",
+    "fsaBadge": "FSAライセンス SD040",
+    "ultencyBadge": "ウルテンシーゲートウェイ",
+    "securityBadge": "分別管理資金",
+    "cards": {
+      "infrastructure": {
+        "title": "完全なインフラストラクチャ",
+        "description": "ウルテンシーゲートウェイアクセスからホワイトラベルソリューションまで、ブローカーが運営に必要なすべてを提供"
+      },
+      "security": {
+        "title": "FSA規制",
+        "description": "FSAライセンス、機関グレードセキュリティ、分別口座、すべてのオペレーションで完全コンプライアンス"
+      },
+      "global": {
+        "title": "グローバルリーチ",
+        "description": "マルチ通貨、マルチ言語、マルチリージョンの機能で世界中のビジネスをサポート"
+      }
+    },
+    "securityPromise": {
+      "title": "ミルトングローバルの全ブランドが機関投資家グレードのセキュリティ基準を維持",
+      "features": "顧客資金の分別管理 • ゼロカットシステム • 包括的なKYC/AML • 銀行レベルの暗号化"
+    }
+  },
+  "brands": {
+    "title": "当社のリテールオペレーション",
+    "subtitle": "ミルトングローバルの統一インフラによって支えられた2つの成功したブランド",
+    "miltonPrime": {
+      "title": "Milton Prime（ミルトンプライム）",
+      "subtitle": "FSA規制下での取引",
+      "description": "セーシェルFSAライセンスの下、完全な規制保護を受けて取引できます。セキュリティ、透明性、機関投資家グレードの約定を重視するトレーダーに最適です。",
+      "features": {
+        "regulation": "FSA完全保護",
+        "platforms": "MT4・MT5プラットフォーム",
+        "leverage": "最大1:100のレバレッジ",
+        "minimum": "最低入金額 $500",
+        "accounts": "顧客資金分別管理",
+        "protection": "ゼロカットシステム"
+      },
+      "badge": "規制対象",
+      "cta": "詳しく見る"
+    },
+    "institutional": {
+      "question": "IB、PAMMマネージャー、またはホワイトラベルソリューション、流動性アクセス、パートナーシップ機会をお探しの機関パートナーの方ですか？",
+      "cta": "パートナーシップチームへお問い合わせ"
+    },
+    "miltonMarkets": {
+      "title": "Milton Markets（ミルトンマーケッツ）",
+      "subtitle": "最大限の取引柔軟性",
+      "description": "柔軟な当社リテールオペレーション。高度な取引機能、多様な商品、様々な市場セグメントへの対応力を示しています。",
+      "features": {
+        "flexibility": "強化された取引の自由度",
+        "platforms": "MT4・MT5・PAMMソリューション",
+        "leverage": "最大1:1000のレバレッジ",
+        "minimum": "最低入金額 $100",
+        "promotions": "入金ボーナス・キャッシュバック",
+        "instruments": "1000以上の取引商品"
+      },
+      "badge": "フレキシブル",
+      "cta": "詳しく見る",
+      "note": "資金セキュリティとKYC/AMLに関してミルトングローバルの運営基準を維持"
+    }
+  },
+  "ultency": {
+    "tag": "MetaQuotes認定パートナー",
+    "title": "ウルテンシーゲートウェイサービス",
+    "description": "当社のウルテンシーゲートウェイインフラを通じて、お客様のクライアントに機関級流動性への直接アクセスを提供します。MetaQuotesの高度なマッチングエンジン技術を求めるブローカー向けにホワイトラベル統合サービスを提供しています。",
+    "subdescription": "インフラコストを削減し、複数のプロバイダーからの集約された流動性にアクセスし、エンタープライズグレードのマッチング技術を活用—すべて単一の統合を通じて実現。",
+    "features": {
+      "latency": "超低レイテンシ",
+      "liquidity": "流動性プロバイダー",
+      "integration": "ネイティブ統合",
+      "reliability": "システム稼働時間"
+    },
+    "ctaPrimary": "ウルテンシーパートナーになる",
+    "ctaSecondary": "資料をリクエスト",
+    "certification": "公式MetaQuotes ウルテンシーゲートウェイプロバイダー"
+  },
+  "fsa": {
+    "title": "FSA規制準拠",
+    "description": "セイシェル金融サービス庁(ライセンスSD040)により認可され最高水準の規制遵守と顧客保護を保証しています",
+    "benefits": {
+      "licensed": "正式ライセンス",
+      "segregated": "分別管理",
+      "compliant": "規制準拠",
+      "audited": "独立監査済"
+    },
+    "learnMore": "FSA規制について詳しく見る"
+  },
+  "latestContent": {
+    "title": "ミルトングローバルの最新情報",
+    "subtitle": "規制、テクノロジー、市場動向に関する最新の洞察をお届けします",
+    "articles": "記事",
+    "news": "企業ニュース",
+    "viewAll": "すべて見る"
+  },
+  "cta": {
+    "title": "提携をご検討ですか",
+    "description": "ミルトングローバルの機関投資家向けインフラとウルテンシー流動性を活用するブローカーネットワークにご参加ください",
+    "button": "お問い合わせ"
+  },
+  "footer": {
+    "description": "FSA規制CFDブローカー＆ウルテンシー流動性プロバイダー。機関投資家向け取引インフラとホワイトラベルソリューションをグローバルブローカーに提供。",
+    "company": "企業情報",
+    "products": "サービス",
+    "resources": "リソース",
+    "legal": "法的情報",
+    "services": "すべてのサービス",
+    "copyright": "© 2025 Milton Global Ltd. All rights reserved.",
+    "license": "セイシェルFSA認可(SD040)",
+    "riskWarning": "リスク警告: CFD取引はリスクが高くすべての投資家に適しているわけではありません"
+  },
+  "services": {
+    "meta": {
+      "title": "機関向けサービス・ソリューション",
+      "description": "ホワイトラベルソリューション、ウルテンシーゲートウェイアクセス、取引インフラ、ブローカーや金融機関向けの規制サポートを含む包括的なB2B金融サービス。"
+    },
+    "hero": {
+      "title": "機関向けサービス・ソリューション",
+      "description": "ミルトングローバルのインフラ、テクノロジー、規制フレームワークを活用して、金融サービスビジネスを立ち上げ、または拡大してください。ホワイトラベルソリューションからウルテンシーゲートウェイアクセスまで、現代のブローカーに必要な完全なエコシステムを提供します。"
+    },
+    "categories": {
+      "infrastructure": {
+        "title": "取引インフラ・テクノロジー",
+        "description": "エンタープライズグレードの取引インフラとテクノロジーソリューション"
+      },
+      "whitelabel": {
+        "title": "ホワイトラベル・プラットフォームソリューション",
+        "description": "カスタマイズ可能なプラットフォームを含む完全なホワイトラベルブローカレッジソリューション"
+      },
+      "liquidity": {
+        "title": "流動性・市場アクセス",
+        "description": "複数の資産クラスにわたる機関流動性と市場アクセス"
+      },
+      "regulatory": {
+        "title": "規制・コンプライアンスサービス",
+        "description": "包括的な規制サポートとコンプライアンスソリューション"
+      },
+      "operations": {
+        "title": "オペレーションサポートサービス",
+        "description": "ビジネスプロセスを効率化する完全なオペレーションサポート"
+      },
+      "consulting": {
+        "title": "コンサルティング・アドバイザリー",
+        "description": "金融機関向けの戦略コンサルティングおよびアドバイザリーサービス"
+      }
+    },
+    "services": {
+      "ultency_gateway": {
+        "title": "ウルテンシーゲートウェイアクセス",
+        "description": "MetaQuotes ウルテンシーマッチングエンジンへの直接アクセス"
+      },
+      "mt5_hosting": {
+        "title": "MT5サーバーホスティング",
+        "description": "完全管理型MT5サーバーインフラ"
+      },
+      "mt4_hosting": {
+        "title": "MT4サーバーホスティング",
+        "description": "信頼性の高いMT4サーバーホスティングと管理"
+      },
+      "fix_api": {
+        "title": "FIX API接続",
+        "description": "低レイテンシFIXプロトコル統合"
+      },
+      "bridge_solutions": {
+        "title": "ブリッジソリューション",
+        "description": "カスタムブリッジの開発と統合"
+      },
+      "aggregation": {
+        "title": "流動性アグリゲーション",
+        "description": "マルチソース流動性アグリゲーション技術"
+      },
+      "risk_management": {
+        "title": "リスク管理システム",
+        "description": "高度なリスク管理と監視ツール"
+      },
+      "dedicated_servers": {
+        "title": "専用サーバー",
+        "description": "高性能専用サーバーソリューション"
+      },
+      "colocation": {
+        "title": "コロケーションサービス",
+        "description": "超低レイテンシのためのLD4およびTY3コロケーション"
+      },
+      "full_whitelabel": {
+        "title": "完全ホワイトラベルブローカレッジ",
+        "description": "あなたのブランドでの完全なターンキーブローカレッジソリューション"
+      },
+      "branded_platforms": {
+        "title": "ブランド取引プラットフォーム",
+        "description": "あなたのブランドでカスタマイズされたMT4/MT5"
+      },
+      "mobile_apps": {
+        "title": "モバイル取引アプリ",
+        "description": "ネイティブiOSおよびAndroid取引アプリケーション"
+      },
+      "web_trader": {
+        "title": "Web取引プラットフォーム",
+        "description": "ブラウザベースの取引プラットフォームソリューション"
+      },
+      "crm_integration": {
+        "title": "CRM統合",
+        "description": "顧客関係管理システム"
+      },
+      "ib_programs": {
+        "title": "IBパートナープログラム",
+        "description": "イントロデューシングブローカープログラム管理"
+      },
+      "pamm_mam": {
+        "title": "PAMM/MAMソリューション",
+        "description": "資金管理プラットフォーム統合"
+      },
+      "copy_trading": {
+        "title": "コピートレードプラットフォーム",
+        "description": "ソーシャルコピートレード機能"
+      },
+      "social_trading": {
+        "title": "ソーシャルトレーディングネットワーク",
+        "description": "完全なソーシャルトレーディングエコシステム"
+      },
+      "prime_liquidity": {
+        "title": "プライムオブプライム流動性",
+        "description": "ティア1銀行流動性へのアクセス"
+      },
+      "institutional_pricing": {
+        "title": "機関価格",
+        "description": "競争力のある機関スプレッドと手数料"
+      },
+      "crypto_liquidity": {
+        "title": "暗号通貨流動性",
+        "description": "深い暗号市場流動性アクセス"
+      },
+      "precious_metals": {
+        "title": "貴金属",
+        "description": "金、銀、貴金属取引"
+      },
+      "cfd_instruments": {
+        "title": "CFD商品",
+        "description": "幅広いCFD製品"
+      },
+      "custom_instruments": {
+        "title": "カスタム商品",
+        "description": "カスタム取引商品の作成"
+      },
+      "liquidity_aggregation": {
+        "title": "流動性アグリゲーション",
+        "description": "複数の流動性ソースを集約"
+      },
+      "smart_routing": {
+        "title": "スマートオーダールーティング",
+        "description": "最良執行のためのインテリジェントな注文ルーティング"
+      },
+      "stp_execution": {
+        "title": "STP執行",
+        "description": "ストレートスルー処理執行"
+      },
+      "regulatory_umbrella": {
+        "title": "規制アンブレラ",
+        "description": "当社の規制ライセンス下での運営"
+      },
+      "license_consulting": {
+        "title": "ライセンスコンサルティング",
+        "description": "規制ライセンス申請サポート"
+      },
+      "compliance_support": {
+        "title": "コンプライアンスサポート",
+        "description": "継続的なコンプライアンスおよび規制サポート"
+      },
+      "kyc_solutions": {
+        "title": "KYCソリューション",
+        "description": "自動KYC検証システム"
+      },
+      "aml_monitoring": {
+        "title": "AMLモニタリング",
+        "description": "アンチマネーロンダリング監視ツール"
+      },
+      "transaction_reporting": {
+        "title": "取引レポート",
+        "description": "規制取引レポートサービス"
+      },
+      "regulatory_hosting": {
+        "title": "規制ホスティング",
+        "description": "コンプライアントインフラホスティング"
+      },
+      "audit_support": {
+        "title": "監査サポート",
+        "description": "規制監査の準備とサポート"
+      },
+      "backoffice_solutions": {
+        "title": "バックオフィスソリューション",
+        "description": "完全なバックオフィス管理システム"
+      },
+      "payment_processing": {
+        "title": "決済処理",
+        "description": "マルチチャネル決済ゲートウェイ統合"
+      },
+      "banking_relationships": {
+        "title": "銀行関係",
+        "description": "確立された銀行パートナーネットワーク"
+      },
+      "customer_support": {
+        "title": "カスタマーサポート",
+        "description": "24/7多言語カスタマーサポート"
+      },
+      "multilingual_support": {
+        "title": "多言語サービス",
+        "description": "複数言語でのサポート"
+      },
+      "marketing_tools": {
+        "title": "マーケティングツール",
+        "description": "デジタルマーケティングと分析ツール"
+      },
+      "lead_generation": {
+        "title": "リードジェネレーション",
+        "description": "適格リード生成サービス"
+      },
+      "reporting_analytics": {
+        "title": "レポートと分析",
+        "description": "高度なレポートとビジネス分析"
+      },
+      "api_integration": {
+        "title": "API統合",
+        "description": "カスタムAPI開発と統合"
+      },
+      "business_consulting": {
+        "title": "ビジネスコンサルティング",
+        "description": "戦略的ビジネス開発コンサルティング"
+      },
+      "market_entry": {
+        "title": "市場参入戦略",
+        "description": "地域市場参入計画"
+      },
+      "product_development": {
+        "title": "製品開発",
+        "description": "金融商品の設計と立ち上げ"
+      },
+      "technology_advisory": {
+        "title": "技術アドバイザリー",
+        "description": "技術アーキテクチャと計画"
+      },
+      "partnership_facilitation": {
+        "title": "パートナーシップ促進",
+        "description": "戦略的パートナーシップ開発"
+      },
+      "training_education": {
+        "title": "トレーニングと教育",
+        "description": "スタッフトレーニングと教育プログラム"
+      }
+    },
+    "cta": {
+      "title": "ビジネスを拡大する準備はできましたか？",
+      "description": "ミルトングローバルと提携して、機関インフラ、テクノロジー、規制サポートにアクセスしてください。",
+      "primaryButton": "コンサルテーションを予約",
+      "secondaryButton": "ウルテンシーについて知る"
+    }
+  },
+  "fsaPage": {
+    "meta": {
+      "title": "FSA認可ブローカー SD040 | ミルトングローバル - セイシェル規制",
+      "description": "ミルトングローバルLtdはセイシェルFSAライセンスSD040の下で運営。規制状態、顧客資金保護、分別管理口座、完全なコンプライアンス体制をご確認いただけます。",
+      "keywords": "FSAセイシェル SD040, ミルトングローバル 規制ブローカー, ミルトングローバルLtd FSA, 顧客資金分別管理, ゼロカットシステム, セイシェル金融サービス局"
+    },
+    "hero": {
+      "badge": "FSAライセンス SD040",
+      "title": "FSA認可ブローカー",
+      "description": "ミルトングローバルはセイシェル金融サービス局の下で運営し、完全な規制遵守と顧客保護を維持しています。",
+      "status": {
+        "active": "有効なライセンス",
+        "jurisdiction": "セイシェル",
+        "year": "2020年から"
+      },
+      "info": {
+        "entity": {
+          "label": "ライセンス保有者",
+          "value": "Milton Global Ltd"
+        },
+        "license": {
+          "label": "ライセンス番号",
+          "value": "SD040"
+        },
+        "type": {
+          "label": "ライセンスタイプ",
+          "value": "証券ディーラー"
+        }
+      }
+    },
+    "benefits": {
+      "segregated": "分別管理資金",
+      "segregatedDesc": "顧客保護",
+      "audited": "独立監査済み",
+      "auditedDesc": "定期的な監督",
+      "capital": "資本要件",
+      "capitalDesc": "財務安定性",
+      "compliant": "完全コンプライアンス",
+      "compliantDesc": "国際基準"
+    },
+    "about": {
+      "title": "セイシェルFSAについて",
+      "description": "金融サービス局は、セイシェルの非銀行金融サービスを監督する規制機関です。",
+      "established": {
+        "title": "確立された当局",
+        "description": "2013年金融サービス局法の下で堅牢な規制枠組みで運用。"
+      },
+      "international": {
+        "title": "国際基準",
+        "description": "グローバルベストプラクティスと国際規制要件に準拠。"
+      },
+      "protection": {
+        "title": "顧客保護",
+        "description": "資金の安全性と運用の透明性を確保する包括的な枠組み。"
+      }
+    },
+    "protection": {
+      "title": "顧客保護フレームワーク",
+      "description": "顧客資金のセキュリティと運用の整合性の最高基準を維持する当社のコミットメント。",
+      "segregated": {
+        "title": "顧客口座の分別管理",
+        "description": "すべての顧客資金は会社の運用資金とは別の口座で保管。"
+      },
+      "negative": {
+        "title": "ゼロカットシステム",
+        "description": "ゼロカットシステムにより、顧客は口座残高を超える損失を被ることはありません。"
+      },
+      "kyc": {
+        "title": "包括的KYC/AML",
+        "description": "厳格な本人確認とマネーロンダリング防止手続き。"
+      },
+      "reporting": {
+        "title": "透明なレポーティング",
+        "description": "FSAへの定期的な財務報告と透明な運用方針。"
+      }
+    },
+    "cta": {
+      "title": "規制エンティティと提携",
+      "description": "当社のFSAライセンスと規制枠組みをあなたのビジネスニーズに活用してください。",
+      "services": "サービスを見る",
+      "contact": "お問い合わせ",
+      "fsaWebsite": "FSA登録を見る"
+    }
+  },
+  "language": {
+    "selector": "言語",
+    "en": "English",
+    "es": "Español",
+    "ja": "日本語"
+  },
+  "miltonPrimePage": {
+    "meta": {
+      "title": "ミルトンプライム - FSA認可取引プラットフォーム | ミルトングローバル【公式】",
+      "description": "ミルトンプライム（Milton Prime）はミルトングローバルがFSAライセンスSD040の下で運営。MT4/MT5プラットフォーム、分別管理口座、ダイレクトマーケットアクセスを提供。",
+      "keywords": "ミルトンプライム, Milton Prime, ミルトングローバル FSAブローカー, MT4 MT5 プラットフォーム, 分別管理口座, ダイレクトマーケットアクセス, ECN取引, 機関投資家向けインフラ"
+    },
+    "hero": {
+      "badge": "FSAライセンス運用",
+      "title": "FSA認可取引プラットフォーム",
+      "description": "Milton Primeは当社のFSAライセンスインフラを紹介し、B2Bパートナーに提供する機関グレードのシステムと規制コンプライアンスを実証します。",
+      "status": {
+        "licensed": "FSAライセンス",
+        "established": "設立2016年",
+        "license": "SD040"
+      },
+      "info": {
+        "entity": {
+          "label": "法人",
+          "value": "Milton Global Ltd"
+        },
+        "license": {
+          "label": "ライセンス",
+          "value": "FSAセイシェル"
+        },
+        "platform": {
+          "label": "プラットフォーム",
+          "value": "MT4 / MT5"
+        }
+      }
+    },
+    "keyInfo": {
+      "title": "運用フレームワーク",
+      "regulation": {
+        "label": "規制ステータス",
+        "value": "FSAセイシェル (SD040)"
+      },
+      "entity": {
+        "label": "運用エンティティ",
+        "value": "Milton Global Ltd"
+      },
+      "platforms": {
+        "label": "取引プラットフォーム",
+        "value": "MetaTrader 4 & 5"
+      },
+      "accounts": {
+        "label": "アカウントタイプ",
+        "value": "スタンダード、ECN、プライム"
+      },
+      "execution": {
+        "label": "執行モデル",
+        "value": "ダイレクトマーケットアクセス"
+      },
+      "security": {
+        "label": "資金セキュリティ",
+        "value": "分別管理口座"
+      }
+    },
+    "platforms": {
+      "mt4": "クラシックプラットフォーム",
+      "mt5": "アドバンスプラットフォーム",
+      "pamm": "資金管理",
+      "api": "FIX APIアクセス"
+    },
+    "infrastructure": {
+      "title": "取引インフラ",
+      "description": "Milton PrimeはすべてのB2Bパートナーに提供する機関グレードのシステムを実証します。",
+      "execution": {
+        "title": "ダイレクトマーケットアクセス",
+        "description": "Ultencyゲートウェイを通じた超低レイテンシ執行、ディーリングデスク介入なし。"
+      },
+      "compliance": {
+        "title": "完全な規制コンプライアンス",
+        "description": "包括KYC/AML手順を含む完全なFSAコンプライアンスフレームワーク。"
+      },
+      "security": {
+        "title": "銀行レベルのセキュリティ",
+        "description": "ゼロカットシステムと暗号化された取引を含む分別管理口座。"
+      }
+    },
+    "cta": {
+      "title": "パートナーシップ機会を探る",
+      "description": "ミルトングローバルのインフラがあなたの金融サービスビジネスをどのように支えるかをご覧ください。",
+      "visitWebsite": "Milton Primeウェブサイトへ",
+      "partnershipInquiry": "パートナーシップお問い合わせ"
+    }
+  },
+  "miltonMarketsPage": {
+    "meta": {
+      "title": "ミルトンマーケッツ - グローバル取引プラットフォーム | ミルトングローバル運営",
+      "description": "ミルトンマーケッツ（Milton Markets）はミルトングローバル運営のグローバル取引プラットフォーム。MT4/MT5/PAMM、最大レバレッジ1:1000、1000種類以上のCFD商品、100カ国以上でサービス提供。",
+      "keywords": "ミルトンマーケッツ, Milton Markets, ミルトングローバル取引プラットフォーム, ハイレバレッジブローカー, MT4 MT5 PAMM, 1000 CFD商品, グローバルフォレックスブローカー, マルチ通貨取引"
+    },
+    "hero": {
+      "badge": "柔軟な取引オペレーション",
+      "title": "実証された市場適応性",
+      "description": "Milton Marketsは柔軟な取引サービスを運用する当社の能力を紹介し、機関パートナーに提供する多様なソリューションを実証します。",
+      "status": {
+        "global": "グローバルオペレーション",
+        "countries": "100か国以上",
+        "support": "24/7"
+      },
+      "info": {
+        "structure": {
+          "label": "構造",
+          "value": "柔軟なオペレーション"
+        },
+        "leverage": {
+          "label": "レバレッジ",
+          "value": "最大1:1000"
+        },
+        "rebates": {
+          "label": "リベート",
+          "value": "競争力のあるレート"
+        }
+      }
+    },
+    "keyInfo": {
+      "title": "運用構造",
+      "structure": {
+        "label": "ビジネスモデル",
+        "value": "柔軟なリテールオペレーション"
+      },
+      "entity": {
+        "label": "法人設立",
+        "value": "セントルシア法人"
+      },
+      "platforms": {
+        "label": "取引プラットフォーム",
+        "value": "MT4、MT5、PAMM"
+      },
+      "leverage": {
+        "label": "最大レバレッジ",
+        "value": "最大1:1000"
+      },
+      "products": {
+        "label": "取引商品",
+        "value": "1000以上のCFD商品"
+      },
+      "security": {
+        "label": "顧客保護",
+        "value": "ゼロカットシステム"
+      }
+    },
+    "platforms": {
+      "mt4": "クラシック取引",
+      "mt5": "マルチアセットプラットフォーム",
+      "pamm": "ファンド管理",
+      "mobile": "iOS & Android"
+    },
+    "operations": {
+      "title": "グローバルオペレーション",
+      "description": "Milton Marketsは複雑でマルチリージョナルのオペレーションを大規模に管理する当社の能力を示します。",
+      "global": {
+        "title": "グローバル市場へのリーチ",
+        "description": "100か国以上にまたがるオペレーション、ローカライズサポートとマルチ通貨処理。"
+      },
+      "flexibility": {
+        "title": "柔軟な取引条件",
+        "description": "最大1:1000までのダイナミックレバレッジ、多様なアカウントタイプ、競争力のあるスプレッド。"
+      },
+      "technology": {
+        "title": "高度な技術スタック",
+        "description": "API統合とモバイル取引ソリューションを含むMT4、MT5、PAMMプラットフォーム。"
+      }
+    },
+    "cta": {
+      "title": "B2Bソリューションを発見",
+      "description": "ミルトングローバルの柔軟なインフラがあなたのビジネスモデルをどのように支えるかをご覧ください。",
+      "visitWebsite": "Milton Marketsウェブサイトへ",
+      "partnershipInquiry": "パートナーシップお問い合わせ"
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "ミルトングローバルお問い合わせ | ご連絡先",
+      "description": "パートナーシップに関するお問い合わせ、機関向けソリューション、サービスに関する一般的なご質問はミルトングローバルまでご連絡ください。",
+      "keywords": "お問い合わせ, ミルトングローバル, パートナーシップ, 機関営業, サポート"
+    },
+    "hero": {
+      "title": "お問い合わせ",
+      "description": "ビジネスニーズについてお話ししませんか？ミルトングローバルがどのようにお客様の成長をサポートできるかご相談いたします。迅速にご返答いたします。"
+    },
+    "form": {
+      "title": "メッセージをお送りください",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "company": "会社名",
+      "subject": "件名",
+      "message": "メッセージ",
+      "namePlaceholder": "フルネームをご入力ください",
+      "emailPlaceholder": "your@email.com",
+      "companyPlaceholder": "会社名をご入力ください",
+      "messagePlaceholder": "お問い合わせ内容について詳しくお聞かせください...",
+      "selectSubject": "件名を選択してください",
+      "partnership": "パートナーシップお問い合わせ",
+      "institutional": "機関取引",
+      "ultency": "ウルテンシー流動性",
+      "general": "一般的なお問い合わせ",
+      "support": "テクニカルサポート",
+      "submit": "メッセージを送信"
+    },
+    "contactInfo": {
+      "title": "連絡先情報",
+      "email": "メールアドレス",
+      "partnerships": "パートナーシップ",
+      "registeredOffice": "登録事務所"
+    }
+  },
+  "newsletter": {
+    "title": "最新情報をお届け",
+    "description": "ミルトングローバルの最新ニュースとアップデートをメールでお届けします",
+    "emailPlaceholder": "メールアドレスを入力",
+    "subscribeButton": "購読する",
+    "subscribingButton": "送信中...",
+    "successTitle": "購読完了！",
+    "successMessage": "最新情報をお届けします",
+    "errorRequired": "メールアドレスを入力してください",
+    "errorGeneric": "エラーが発生しました。もう一度お試しください",
+    "thankYou": "購読ありがとうございます！最新情報をお届けします"
+  },
+  "news": {
+    "title": "企業ニュース",
+    "description": "ミルトングローバルからの最新発表、更新、マイルストーンをお届けします",
+    "filters": {
+      "all": "すべて",
+      "announcements": "企業発表",
+      "regulatory": "規制更新",
+      "partnerships": "パートナーシップ"
+    },
+    "readMore": "続きを読む"
+  },
+  "aboutPage": {
+    "hero": {
+      "badge1": "FSAライセンス SD040",
+      "badge2": "2016年設立",
+      "title": "世界市場で信頼を構築",
+      "subtitle": "最先端技術と規制の卓越性により支えられた機関投資家グレードの取引インフラストラクチャー"
+    },
+    "foundation": {
+      "title": "私たちの基盤",
+      "subtitle": "2016年以来、私たちはすべての活動を定義する3つの中核的な柱に基づいて評判を築いてきました",
+      "compliance": {
+        "title": "規制コンプライアンス",
+        "description": "ライセンスSD040でFSAの厳格な監督下で運営し、クライアント保護と運営の透明性の最高基準を確保"
+      },
+      "technology": {
+        "title": "先進技術",
+        "description": "MetaQuotes Ultencyインフラストラクチャを活用し、世界市場全体で機関投資家グレードの執行と深い流動性を提供"
+      },
+      "global": {
+        "title": "グローバルリーチ",
+        "description": "ローカライズされたサポートと多通貨機能により、複数の大陸のトレーダーと機関にサービスを提供"
+      }
+    },
+    "infrastructure": {
+      "title": "インフラストラクチャの卓越性",
+      "description1": "当社のインフラストラクチャは、技術とパートナーシップへの継続的な投資の年月を表しています。MetaQuotes Ultencyエコシステムの認定参加者として、機関投資家グレードの執行品質で直接市場アクセスを提供します。",
+      "description2": "エンタープライズレベルのハードウェア、冗長接続、戦略的なサーバーロケーションの組み合わせにより、個人トレーダーから大規模機関まで、すべての市場参加者に最適なパフォーマンスを保証します。",
+      "features": {
+        "latency": "超低レイテンシー執行",
+        "uptime": "99.99%稼働率保証",
+        "multiAsset": "マルチアセットクラスサポート",
+        "security": "エンタープライズグレードセキュリティ"
+      },
+      "metrics": {
+        "instruments": "取引商品",
+        "countries": "サービス提供国",
+        "execution": "執行速度",
+        "established": "設立"
+      }
+    },
+    "commitment": {
+      "title": "私たちのコミットメント",
+      "description1": "ミルトングローバルでは、信頼は一貫した卓越性の提供を通じて獲得されることを理解しています。私たちのコミットメントは市場へのアクセス提供を超えて、お客様の取引の旅において信頼できるパートナーになることを目指しています。",
+      "description2": "ミルトンプライムとミルトンマーケッツとのデュアルブランドアプローチを通じて、サービスの卓越性の統一基準を維持しながら、多様な取引ニーズに対応しています。洗練されたソリューションを必要とする機関投資家向けクライアントにサービスを提供する場合でも、信頼性の高い市場アクセスを求める個人トレーダーにサービスを提供する場合でも、私たちの焦点は揺るぎません：技術、コンプライアンス、サービスを通じて価値を提供すること。",
+      "description3": "市場とともに進化を続ける中、私たちの基盤は堅固なままです - 規制コンプライアンス、技術革新、そしてお客様の成功への揺るぎないコミットメントに基づいて構築されています。",
+      "pillars": {
+        "standards": {
+          "title": "揺るぎない基準",
+          "description": "ミルトンプライムとミルトンマーケッツ全体で一貫した卓越性"
+        },
+        "success": {
+          "title": "クライアント成功重視",
+          "description": "お客様の成功が私たちの最も重要な成果指標です"
+        },
+        "innovation": {
+          "title": "継続的なイノベーション",
+          "description": "堅固な基盤を維持しながら市場とともに進化"
+        }
+      }
+    },
+    "regulatory": {
+      "title": "規制・認可",
+      "entity": "運営主体",
+      "entityName": "ミルトングローバルLtd",
+      "authority": "規制当局",
+      "authorityName": "セーシェルFSA",
+      "license": "ライセンス番号",
+      "licenseNumber": "SD040",
+      "address": "登録事務所：Office 1, Unit 2, 2nd Floor Dekk House, Plaisance, Mahé, Seychelles"
+    }
+  }
+}
+

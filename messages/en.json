@@ -1,0 +1,798 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "miltonPrime": "Milton Prime",
+    "miltonMarkets": "Milton Markets",
+    "fsaRegulation": "FSA Regulation",
+    "ultency": "Ultency",
+    "articles": "Articles",
+    "news": "News",
+    "contact": "Contact",
+    "company": "Company",
+    "companyMenu": {
+      "about": "About",
+      "miltonGlobal": "Milton Global",
+      "fsaRegulation": "FSA Regulation",
+      "news": "News",
+      "articles": "Articles",
+      "brands": "Brands",
+      "miltonPrime": "Milton Prime",
+      "miltonMarkets": "Milton Markets"
+    },
+    "servicesMenu": {
+      "ourServices": "Our Services",
+      "ultency": "Ultency Gateway",
+      "viewAll": "View All Services"
+    }
+  },
+  "hero": {
+    "title": "Global Infrastructure for Modern Trading",
+    "subtitle": "The complete ecosystem for launching and scaling financial services",
+    "description": "From technology and liquidity to regulation and operations, Milton Global provides everything brokers need to compete globally. Whether you're launching a new venture or scaling existing operations, we deliver the integrated infrastructure that powers successful financial businesses.",
+    "ctaPrimary": "Book IFX EXPO Meeting",
+    "ctaSecondary": "Explore Our Services"
+  },
+  "metrics": {
+    "yearsInBusiness": "Years",
+    "yearsInBusinessSub": "Established 2016",
+    "dailyVolume": "Daily Volume",
+    "dailyVolumeSub": "Average Trading",
+    "institutionalClients": "Institutional Clients",
+    "institutionalClientsSub": "Global Partners",
+    "uptime": "System Uptime",
+    "uptimeSub": "2024 Average"
+  },
+  "about": {
+    "title": "Milton Global",
+    "subtitle": "Building the Foundation for Global Financial Services",
+    "description": "Milton Global Ltd provides the complete infrastructure ecosystem that powers modern financial services. As an FSA-licensed entity (SD040), we operate comprehensive B2B solutions while managing two successful retail brands. Our integrated platform combines technology, liquidity, regulation, and operations into a single, seamless foundation for financial success.",
+    "fsaBadge": "FSA License SD040",
+    "ultencyBadge": "Ultency Gateway",
+    "securityBadge": "Segregated Funds",
+    "cards": {
+      "infrastructure": {
+        "title": "Complete Infrastructure",
+        "description": "From Ultency gateway access to white-label solutions, we provide everything brokers need to operate"
+      },
+      "security": {
+        "title": "FSA Regulated",
+        "description": "FSA licensed with institutional-grade security, segregated accounts, and full compliance across all operations"
+      },
+      "global": {
+        "title": "Global Reach",
+        "description": "Supporting businesses worldwide with multi-currency, multi-lingual, and multi-regional capabilities"
+      }
+    },
+    "securityPromise": {
+      "title": "All Milton Global brands maintain institutional-grade security standards",
+      "features": "Segregated client funds • Negative balance protection • Comprehensive KYC/AML • Bank-level encryption"
+    }
+  },
+  "brands": {
+    "title": "Our Retail Operations",
+    "subtitle": "Two successful brands powered by Milton Global's unified infrastructure",
+    "miltonPrime": {
+      "title": "Milton Prime",
+      "subtitle": "FSA-Regulated Trading",
+      "description": "Our FSA-regulated retail operation demonstrating institutional-grade infrastructure and full regulatory compliance with complete transparency.",
+      "features": {
+        "regulation": "FSA Licensed (SD040)",
+        "platforms": "MT4 & MT5 Platforms",
+        "accounts": "Segregated Client Accounts",
+        "protection": "Full Regulatory Compliance"
+      },
+      "badge": "Regulated",
+      "cta": "Learn More"
+    },
+    "institutional": {
+      "question": "Are you an IB, PAMM manager, or institutional partner looking for white-label solutions, liquidity access, or partnership opportunities?",
+      "cta": "Contact Partnership Team"
+    },
+    "miltonMarkets": {
+      "title": "Milton Markets",
+      "subtitle": "Maximum Trading Flexibility",
+      "description": "Our flexible retail operation showcasing advanced trading capabilities, diverse products, and our ability to serve various market segments.",
+      "features": {
+        "flexibility": "Flexible Trading Conditions",
+        "platforms": "MT4, MT5 & PAMM Solutions",
+        "leverage": "Extended Leverage Options",
+        "instruments": "Comprehensive Product Range"
+      },
+      "badge": "Flexible",
+      "cta": "Learn More",
+      "note": "Maintains Milton Global operational standards for fund security and KYC/AML"
+    }
+  },
+  "ultency": {
+    "tag": "MetaQuotes Certified Partner",
+    "title": "Ultency Gateway Services",
+    "description": "Offer your clients direct access to institutional liquidity through our Ultency gateway infrastructure. We provide white-label integration services for brokers seeking MetaQuotes' advanced matching engine technology.",
+    "subdescription": "Reduce infrastructure costs, access aggregated liquidity from multiple providers, and leverage enterprise-grade matching technology—all through a single integration.",
+    "features": {
+      "latency": "Ultra-Low Latency",
+      "liquidity": "Liquidity Providers",
+      "integration": "Native Integration",
+      "reliability": "System Uptime"
+    },
+    "ctaPrimary": "Become an Ultency Partner",
+    "ctaSecondary": "Request Documentation",
+    "certification": "Official MetaQuotes Ultency gateway provider"
+  },
+  "fsa": {
+    "title": "FSA Regulated & Compliant",
+    "description": "Licensed by the Seychelles Financial Services Authority (License SD040), ensuring the highest standards of regulatory compliance and client protection.",
+    "benefits": {
+      "licensed": "Fully Licensed",
+      "segregated": "Segregated Funds",
+      "compliant": "Regulatory Compliant",
+      "audited": "Independently Audited"
+    },
+    "learnMore": "Learn More About FSA Regulation"
+  },
+  "latestContent": {
+    "title": "Latest from Milton Global",
+    "subtitle": "Stay informed with our latest insights on regulation, technology, and market developments",
+    "articles": "Articles",
+    "news": "Company News",
+    "viewAll": "View All"
+  },
+  "cta": {
+    "title": "Ready to Partner?",
+    "description": "Join the growing network of brokers leveraging Milton Global's institutional infrastructure and Ultency liquidity.",
+    "button": "Contact Us"
+  },
+  "footer": {
+    "description": "FSA-regulated CFD broker and Ultency liquidity provider offering institutional trading infrastructure and white-label solutions for global brokers.",
+    "company": "Company",
+    "products": "Products",
+    "resources": "Resources",
+    "legal": "Legal",
+    "services": "All Services",
+    "copyright": "© 2025 Milton Global Ltd. All rights reserved.",
+    "license": "Licensed by Seychelles FSA (SD040)",
+    "riskWarning": "Risk Warning: CFD trading carries high risk and may not suit all investors."
+  },
+  "services": {
+    "meta": {
+      "title": "Institutional Services & Solutions",
+      "description": "Comprehensive B2B financial services including white-label solutions, Ultency gateway access, trading infrastructure, and regulatory support for brokers and financial institutions."
+    },
+    "hero": {
+      "title": "Institutional Services & Solutions",
+      "description": "Leverage Milton Global's infrastructure, technology, and regulatory framework to launch or scale your financial services business. From white-label solutions to Ultency gateway access, we provide the complete ecosystem for modern brokers."
+    },
+    "categories": {
+      "infrastructure": {
+        "title": "Trading Infrastructure & Technology",
+        "description": "Enterprise-grade trading infrastructure and technology solutions"
+      },
+      "whitelabel": {
+        "title": "White Label & Platform Solutions",
+        "description": "Complete white-label brokerage solutions with customizable platforms"
+      },
+      "liquidity": {
+        "title": "Liquidity & Market Access",
+        "description": "Institutional liquidity and market access across multiple asset classes"
+      },
+      "regulatory": {
+        "title": "Regulatory & Compliance Services",
+        "description": "Comprehensive regulatory support and compliance solutions"
+      },
+      "operations": {
+        "title": "Operational Support Services",
+        "description": "Full operational support to streamline your business processes"
+      },
+      "consulting": {
+        "title": "Consulting & Advisory",
+        "description": "Strategic consulting and advisory services for financial institutions"
+      }
+    },
+    "services": {
+      "ultency_gateway": {
+        "title": "Ultency Gateway Access",
+        "description": "Direct access to MetaQuotes Ultency matching engine"
+      },
+      "mt5_hosting": {
+        "title": "MT5 Server Hosting",
+        "description": "Fully managed MT5 server infrastructure"
+      },
+      "mt4_hosting": {
+        "title": "MT4 Server Hosting",
+        "description": "Reliable MT4 server hosting and management"
+      },
+      "fix_api": {
+        "title": "FIX API Connectivity",
+        "description": "Low-latency FIX protocol integration"
+      },
+      "bridge_solutions": {
+        "title": "Bridge Solutions",
+        "description": "Custom bridge development and integration"
+      },
+      "aggregation": {
+        "title": "Liquidity Aggregation",
+        "description": "Multi-source liquidity aggregation technology"
+      },
+      "risk_management": {
+        "title": "Risk Management Systems",
+        "description": "Advanced risk management and monitoring tools"
+      },
+      "dedicated_servers": {
+        "title": "Dedicated Servers",
+        "description": "High-performance dedicated server solutions"
+      },
+      "colocation": {
+        "title": "Colocation Services",
+        "description": "LD4 and TY3 colocation for ultra-low latency"
+      },
+      "disaster_recovery": {
+        "title": "Disaster Recovery",
+        "description": "Comprehensive backup and disaster recovery solutions"
+      },
+      "full_whitelabel": {
+        "title": "Full White-Label Brokerage",
+        "description": "Complete turnkey brokerage solution with your branding"
+      },
+      "branded_platforms": {
+        "title": "Branded Trading Platforms",
+        "description": "Customized MT4/MT5 with your branding"
+      },
+      "mobile_apps": {
+        "title": "Mobile Trading Apps",
+        "description": "Native iOS and Android trading applications"
+      },
+      "web_trader": {
+        "title": "Web Trading Platform",
+        "description": "Browser-based trading platform solutions"
+      },
+      "crm_integration": {
+        "title": "CRM Integration",
+        "description": "Customer relationship management systems"
+      },
+      "ib_programs": {
+        "title": "IB Partner Programs",
+        "description": "Introducing broker program management"
+      },
+      "pamm_mam": {
+        "title": "PAMM/MAM Solutions",
+        "description": "Money management platform integration"
+      },
+      "copy_trading": {
+        "title": "Copy Trading Platform",
+        "description": "Social copy trading functionality"
+      },
+      "social_trading": {
+        "title": "Social Trading Network",
+        "description": "Complete social trading ecosystem"
+      },
+      "prime_liquidity": {
+        "title": "Prime of Prime Liquidity",
+        "description": "Access to tier-1 bank liquidity"
+      },
+      "institutional_pricing": {
+        "title": "Institutional Pricing",
+        "description": "Competitive institutional spreads and commissions"
+      },
+      "crypto_liquidity": {
+        "title": "Cryptocurrency Liquidity",
+        "description": "Deep crypto market liquidity access"
+      },
+      "precious_metals": {
+        "title": "Precious Metals",
+        "description": "Gold, silver, and precious metals trading"
+      },
+      "cfd_instruments": {
+        "title": "CFD Instruments",
+        "description": "Wide range of CFD products"
+      },
+      "custom_instruments": {
+        "title": "Custom Instruments",
+        "description": "Create custom trading instruments"
+      },
+      "liquidity_aggregation": {
+        "title": "Liquidity Aggregation",
+        "description": "Aggregate multiple liquidity sources"
+      },
+      "smart_routing": {
+        "title": "Smart Order Routing",
+        "description": "Intelligent order routing for best execution"
+      },
+      "stp_execution": {
+        "title": "STP Execution",
+        "description": "Straight-through processing execution"
+      },
+      "regulatory_umbrella": {
+        "title": "Regulatory Umbrella",
+        "description": "Operate under our regulatory license"
+      },
+      "license_consulting": {
+        "title": "License Consulting",
+        "description": "Regulatory license application support"
+      },
+      "compliance_support": {
+        "title": "Compliance Support",
+        "description": "Ongoing compliance and regulatory support"
+      },
+      "kyc_solutions": {
+        "title": "KYC Solutions",
+        "description": "Automated KYC verification systems"
+      },
+      "aml_monitoring": {
+        "title": "AML Monitoring",
+        "description": "Anti-money laundering monitoring tools"
+      },
+      "transaction_reporting": {
+        "title": "Transaction Reporting",
+        "description": "Regulatory transaction reporting services"
+      },
+      "regulatory_hosting": {
+        "title": "Regulatory Hosting",
+        "description": "Compliant infrastructure hosting"
+      },
+      "audit_support": {
+        "title": "Audit Support",
+        "description": "Regulatory audit preparation and support"
+      },
+      "backoffice_solutions": {
+        "title": "Back-Office Solutions",
+        "description": "Complete back-office management systems"
+      },
+      "payment_processing": {
+        "title": "Payment Processing",
+        "description": "Multi-channel payment gateway integration"
+      },
+      "banking_relationships": {
+        "title": "Banking Relationships",
+        "description": "Established banking partner network"
+      },
+      "customer_support": {
+        "title": "Customer Support",
+        "description": "24/7 multilingual customer support"
+      },
+      "multilingual_support": {
+        "title": "Multilingual Services",
+        "description": "Support in multiple languages"
+      },
+      "marketing_tools": {
+        "title": "Marketing Tools",
+        "description": "Digital marketing and analytics tools"
+      },
+      "lead_generation": {
+        "title": "Lead Generation",
+        "description": "Qualified lead generation services"
+      },
+      "reporting_analytics": {
+        "title": "Reporting & Analytics",
+        "description": "Advanced reporting and business analytics"
+      },
+      "api_integration": {
+        "title": "API Integration",
+        "description": "Custom API development and integration"
+      },
+      "business_consulting": {
+        "title": "Business Consulting",
+        "description": "Strategic business development consulting"
+      },
+      "market_entry": {
+        "title": "Market Entry Strategy",
+        "description": "Regional market entry planning"
+      },
+      "product_development": {
+        "title": "Product Development",
+        "description": "Financial product design and launch"
+      },
+      "technology_advisory": {
+        "title": "Technology Advisory",
+        "description": "Technical architecture and planning"
+      },
+      "partnership_facilitation": {
+        "title": "Partnership Facilitation",
+        "description": "Strategic partnership development"
+      },
+      "training_education": {
+        "title": "Training & Education",
+        "description": "Staff training and educational programs"
+      }
+    },
+    "cta": {
+      "title": "Ready to Scale Your Business?",
+      "description": "Partner with Milton Global to access institutional infrastructure, technology, and regulatory support.",
+      "primaryButton": "Schedule Consultation",
+      "secondaryButton": "Learn About Ultency"
+    }
+  },
+  "fsaPage": {
+    "meta": {
+      "title": "FSA Licensed Broker SD040 | Milton Global - Seychelles Regulated",
+      "description": "Milton Global Ltd operates under FSA Seychelles license SD040. Verify our regulatory status, client fund protection, segregated accounts, and full compliance framework.",
+      "keywords": "FSA Seychelles SD040, Milton Global regulated broker, Milton Global Ltd FSA, segregated client accounts, negative balance protection, Seychelles financial services authority"
+    },
+    "hero": {
+      "badge": "FSA Licensed SD040",
+      "title": "FSA Licensed Broker",
+      "description": "Milton Global operates under the Seychelles Financial Services Authority, maintaining full regulatory compliance and client protection.",
+      "status": {
+        "active": "Active License",
+        "jurisdiction": "Seychelles",
+        "year": "Since 2020"
+      },
+      "info": {
+        "entity": {
+          "label": "License Holder",
+          "value": "Milton Global Ltd"
+        },
+        "license": {
+          "label": "License Number",
+          "value": "SD040"
+        },
+        "type": {
+          "label": "License Type",
+          "value": "Securities Dealer"
+        }
+      }
+    },
+    "benefits": {
+      "segregated": "Segregated Funds",
+      "segregatedDesc": "Client Protection",
+      "audited": "Independently Audited",
+      "auditedDesc": "Regular Oversight",
+      "capital": "Capital Requirements",
+      "capitalDesc": "Financial Stability",
+      "compliant": "Full Compliance",
+      "compliantDesc": "International Standards"
+    },
+    "about": {
+      "title": "About Seychelles FSA",
+      "description": "The Financial Services Authority is the regulatory body responsible for supervising non-bank financial services in Seychelles.",
+      "established": {
+        "title": "Established Authority",
+        "description": "Operating under the Financial Services Authority Act 2013 with robust regulatory framework."
+      },
+      "international": {
+        "title": "International Standards",
+        "description": "Aligned with global best practices and international regulatory requirements."
+      },
+      "protection": {
+        "title": "Client Protection",
+        "description": "Comprehensive framework ensuring fund safety and operational transparency."
+      }
+    },
+    "protection": {
+      "title": "Client Protection Framework",
+      "description": "Our commitment to maintaining the highest standards of client fund security and operational integrity.",
+      "segregated": {
+        "title": "Segregated Client Accounts",
+        "description": "All client funds held in separate accounts from company operational funds."
+      },
+      "negative": {
+        "title": "Negative Balance Protection",
+        "description": "Zero-cut system ensures clients never lose more than their account balance."
+      },
+      "kyc": {
+        "title": "Comprehensive KYC/AML",
+        "description": "Strict identity verification and anti-money laundering procedures."
+      },
+      "reporting": {
+        "title": "Transparent Reporting",
+        "description": "Regular financial reporting to FSA and transparent operational policies."
+      }
+    },
+    "cta": {
+      "title": "Partner with a Regulated Entity",
+      "description": "Leverage our FSA license and regulatory framework for your business needs.",
+      "services": "View Services",
+      "contact": "Contact Us",
+      "fsaWebsite": "View FSA Registry"
+    }
+  },
+  "language": {
+    "selector": "Language",
+    "en": "English",
+    "es": "Español", 
+    "ja": "日本語"
+  },
+  "miltonPrimePage": {
+    "meta": {
+      "title": "Milton Prime - FSA Licensed Trading Platform | Milton Global",
+      "description": "Trade with Milton Prime, operated by Milton Global Ltd under FSA license SD040. Access MT4/MT5 platforms, segregated accounts, direct market access, and institutional-grade infrastructure.",
+      "keywords": "Milton Prime, Milton Global FSA broker, MT4 MT5 platform, segregated client accounts, direct market access, ECN trading, institutional trading infrastructure, Seychelles regulated broker"
+    },
+    "hero": {
+      "badge": "FSA-Licensed Operation",
+      "title": "FSA Licensed Trading Platform",
+      "description": "Milton Prime showcases our FSA-licensed infrastructure, demonstrating the institutional-grade systems and regulatory compliance we provide to B2B partners.",
+      "status": {
+        "licensed": "FSA Licensed",
+        "established": "Est. 2016",
+        "license": "SD040"
+      },
+      "info": {
+        "entity": {
+          "label": "Entity",
+          "value": "Milton Global Ltd"
+        },
+        "license": {
+          "label": "License",
+          "value": "FSA Seychelles"
+        },
+        "platform": {
+          "label": "Platform",
+          "value": "MT4 / MT5"
+        }
+      }
+    },
+    "keyInfo": {
+      "title": "Operational Framework",
+      "regulation": {
+        "label": "Regulatory Status",
+        "value": "FSA Seychelles (SD040)"
+      },
+      "entity": {
+        "label": "Operating Entity",
+        "value": "Milton Global Ltd"
+      },
+      "platforms": {
+        "label": "Trading Platforms",
+        "value": "MetaTrader 4 & 5"
+      },
+      "accounts": {
+        "label": "Account Types",
+        "value": "Standard, ECN, Prime"
+      },
+      "execution": {
+        "label": "Execution Model",
+        "value": "Direct Market Access"
+      },
+      "security": {
+        "label": "Fund Security",
+        "value": "Segregated Accounts"
+      }
+    },
+    "platforms": {
+      "mt4": "Classic Platform",
+      "mt5": "Advanced Platform",
+      "pamm": "Money Management",
+      "api": "FIX API Access"
+    },
+    "infrastructure": {
+      "title": "Trading Infrastructure",
+      "description": "Milton Prime demonstrates the institutional-grade systems we provide to all B2B partners.",
+      "execution": {
+        "title": "Direct Market Access",
+        "description": "Ultra-low latency execution through Ultency gateway with no dealing desk intervention."
+      },
+      "compliance": {
+        "title": "Full Regulatory Compliance",
+        "description": "Complete FSA compliance framework with comprehensive KYC/AML procedures."
+      },
+      "security": {
+        "title": "Bank-Level Security",
+        "description": "Segregated client accounts with negative balance protection and encrypted transactions."
+      }
+    },
+    "cta": {
+      "title": "Explore Partnership Opportunities",
+      "description": "Learn how Milton Global's infrastructure can power your financial services business.",
+      "visitWebsite": "Visit Milton Prime Website",
+      "partnershipInquiry": "Partnership Inquiry"
+    }
+  },
+  "miltonMarketsPage": {
+    "meta": {
+      "title": "Milton Markets - Global Trading Platform | Milton Global Operations",
+      "description": "Trade globally with Milton Markets, operated by Milton Global. Access MT4/MT5/PAMM platforms, leverage up to 1:1000, 1000+ CFD instruments, multi-currency support across 100+ countries.",
+      "keywords": "Milton Markets, Milton Global trading platform, high leverage broker, MT4 MT5 PAMM, 1000 CFD instruments, global forex broker, multi-currency trading, flexible trading conditions"
+    },
+    "hero": {
+      "badge": "Flexible Trading Operations",
+      "title": "Market Adaptability Demonstrated",
+      "description": "Milton Markets showcases our capability to operate flexible trading services, demonstrating the diverse solutions we offer to institutional partners.",
+      "status": {
+        "global": "Global Operations",
+        "countries": "100+ Countries",
+        "support": "24/7"
+      },
+      "info": {
+        "structure": {
+          "label": "Structure",
+          "value": "Flexible Operations"
+        },
+        "leverage": {
+          "label": "Leverage",
+          "value": "Up to 1:1000"
+        },
+        "rebates": {
+          "label": "Rebates",
+          "value": "Competitive Rates"
+        }
+      }
+    },
+    "keyInfo": {
+      "title": "Operational Structure",
+      "structure": {
+        "label": "Business Model",
+        "value": "Flexible Retail Operations"
+      },
+      "entity": {
+        "label": "Incorporation",
+        "value": "St. Lucia Entity"
+      },
+      "platforms": {
+        "label": "Trading Platforms",
+        "value": "MT4, MT5, PAMM"
+      },
+      "leverage": {
+        "label": "Maximum Leverage",
+        "value": "Up to 1:1000"
+      },
+      "products": {
+        "label": "Trading Instruments",
+        "value": "1000+ CFD Products"
+      },
+      "security": {
+        "label": "Client Protection",
+        "value": "Negative Balance Protection"
+      }
+    },
+    "platforms": {
+      "mt4": "Classic Trading",
+      "mt5": "Multi-Asset Platform",
+      "pamm": "Fund Management",
+      "mobile": "iOS & Android"
+    },
+    "operations": {
+      "title": "Global Operations",
+      "description": "Milton Markets showcases our ability to manage complex, multi-regional operations at scale.",
+      "global": {
+        "title": "Global Market Reach",
+        "description": "Operations spanning 100+ countries with localized support and multi-currency processing."
+      },
+      "flexibility": {
+        "title": "Flexible Trading Conditions",
+        "description": "Dynamic leverage up to 1:1000, diverse account types, and competitive spreads."
+      },
+      "technology": {
+        "title": "Advanced Technology Stack",
+        "description": "MT4, MT5, and PAMM platforms with API integration and mobile trading solutions."
+      }
+    },
+    "cta": {
+      "title": "Discover B2B Solutions",
+      "description": "See how Milton Global's flexible infrastructure can support your business model.",
+      "visitWebsite": "Visit Milton Markets Website",
+      "partnershipInquiry": "Partnership Inquiry"
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contact Milton Global | Get in Touch",
+      "description": "Contact Milton Global for partnership inquiries, institutional solutions, or general questions about our services.",
+      "keywords": "contact, Milton Global, partnership, institutional sales, support"
+    },
+    "hero": {
+      "title": "Let's Talk",
+      "description": "Ready to discuss your business needs? Let's explore how Milton Global can support your growth. We'll get back to you promptly."
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "your@email.com",
+      "companyPlaceholder": "Your company name",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "selectSubject": "Select a subject",
+      "partnership": "Partnership Inquiry",
+      "institutional": "Institutional Trading",
+      "ultency": "Ultency Liquidity",
+      "general": "General Question",
+      "support": "Technical Support",
+      "submit": "Send Message"
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "email": "Email",
+      "partnerships": "Partnerships",
+      "registeredOffice": "Registered Office"
+    }
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get the latest news and updates from Milton Global delivered to your inbox.",
+    "emailPlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe",
+    "subscribingButton": "Subscribing...",
+    "successTitle": "Subscribed!",
+    "successMessage": "We'll keep you updated with the latest news.",
+    "errorRequired": "Please enter your email address",
+    "errorGeneric": "An error occurred. Please try again.",
+    "thankYou": "Thank you for subscribing! We'll keep you updated."
+  },
+  "news": {
+    "title": "Company News",
+    "description": "Latest announcements, updates, and milestones from Milton Global",
+    "filters": {
+      "all": "All",
+      "announcements": "Announcements",
+      "regulatory": "Regulatory",
+      "partnerships": "Partnerships"
+    },
+    "readMore": "Read more"
+  },
+  "aboutPage": {
+    "hero": {
+      "badge1": "FSA Licensed SD040",
+      "badge2": "Est. 2016",
+      "title": "Building Trust in Global Markets",
+      "subtitle": "Institutional-grade trading infrastructure powered by cutting-edge technology and regulatory excellence"
+    },
+    "foundation": {
+      "title": "Our Foundation",
+      "subtitle": "Since 2016, we've built our reputation on three core pillars that define everything we do",
+      "compliance": {
+        "title": "Regulatory Compliance",
+        "description": "Operating under strict FSA oversight with license SD040, ensuring the highest standards of client protection and operational transparency"
+      },
+      "technology": {
+        "title": "Advanced Technology", 
+        "description": "Leveraging MetaQuotes Ultency infrastructure to deliver institutional-grade execution and deep liquidity across global markets"
+      },
+      "global": {
+        "title": "Global Reach",
+        "description": "Serving traders and institutions across multiple continents with localized support and multi-currency capabilities"
+      }
+    },
+    "infrastructure": {
+      "title": "Infrastructure Excellence",
+      "description1": "Our infrastructure represents years of continuous investment in technology and partnerships. As an authorized participant in the MetaQuotes Ultency ecosystem, we provide direct market access with institutional-grade execution quality.",
+      "description2": "The combination of enterprise-level hardware, redundant connectivity, and strategic server locations ensures optimal performance for all market participants, from individual traders to large institutions.",
+      "features": {
+        "latency": "Ultra-low latency execution",
+        "uptime": "99.99% uptime guarantee",
+        "multiAsset": "Multi-asset class support",
+        "security": "Enterprise-grade security"
+      },
+      "metrics": {
+        "instruments": "Trading Instruments",
+        "countries": "Countries Served",
+        "execution": "Execution Speed",
+        "established": "Established"
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "description1": "At Milton Global, we understand that trust is earned through consistent delivery of excellence. Our commitment extends beyond providing access to markets – we strive to be a reliable partner in our clients' trading journey.",
+      "description2": "Through our dual-brand approach with Milton Prime and Milton Markets, we cater to diverse trading needs while maintaining uniform standards of service excellence. Whether serving institutional clients requiring sophisticated solutions or retail traders seeking reliable market access, our focus remains unwavering: delivering value through technology, compliance, and service.",
+      "description3": "As we continue to evolve with the markets, our foundation remains solid – built on regulatory compliance, technological innovation, and an unwavering commitment to our clients' success.",
+      "pillars": {
+        "standards": {
+          "title": "Unwavering Standards",
+          "description": "Uniform excellence across Milton Prime and Milton Markets"
+        },
+        "success": {
+          "title": "Client Success Focus",
+          "description": "Your success is our primary measure of achievement"
+        },
+        "innovation": {
+          "title": "Continuous Innovation",
+          "description": "Evolving with markets while maintaining solid foundations"
+        }
+      }
+    },
+    "regulatory": {
+      "title": "Regulated & Authorized",
+      "entity": "Operating Entity",
+      "entityName": "Milton Global Ltd",
+      "authority": "Regulatory Authority",
+      "authorityName": "Seychelles FSA",
+      "license": "License Number",
+      "licenseNumber": "SD040",
+      "address": "Registered Office: Office 1, Unit 2, 2nd Floor Dekk House, Plaisance, Mahé, Seychelles"
+    }
+  }
+}
+

@@ -138,9 +138,31 @@
   "latestContent": {
     "title": "ミルトングローバルの最新情報",
     "subtitle": "規制、テクノロジー、市場動向に関する最新の洞察をお届けします",
-    "articles": "記事",
-    "news": "企業ニュース",
-    "viewAll": "すべて見る"
+    "articlesTitle": "記事",
+    "newsTitle": "企業ニュース",
+    "viewAll": "すべて見る",
+    "categories": {
+      "Technology": "テクノロジー",
+      "Company": "企業",
+      "News": "ニュース",
+      "Regulation": "規制"
+    },
+    "articles": {
+      "whatIsUltancy": {
+        "title": "ウルテンシーとは？MetaQuotesマッチングエンジン完全ガイド",
+        "excerpt": "MetaQuotesの超低遅延マッチングエンジン「ウルテンシー」について。MT5ブローカー向けのコスト削減、約定改善、複数流動性提供者へのアクセス方法を解説。"
+      },
+      "fsaRegulation": {
+        "title": "FSAセイシェル規制：ブローカーとトレーダーのための完全FAQガイド",
+        "excerpt": "FSAセイシェルライセンス要件、顧客保護、コンプライアンス義務、FCA・ASIC・CySECとの比較を網羅した完全FAQガイド。ブローカーとトレーダーが知るべきFSA規制のすべて。"
+      }
+    },
+    "news": {
+      "miltonGlobalApproved": {
+        "title": "Ultency Matching Engine（LD4）でミルトングローバルが流動性プロバイダーとして利用可能に",
+        "excerpt": "Ultency を利用するMT5ブローカーは、ミルトングローバルを既存の設定に追加し、銘柄やクライアントグループ単位でのマークアップやルーティング、リスク管理を行えます。"
+      }
+    }
   },
   "cta": {
     "title": "提携をご検討ですか",
@@ -1007,7 +1029,11 @@
     "learnMore": "ミルトングローバルについて詳しく",
     "learnMoreDescription": "FSA規制下の取引ソリューションとUltency流動性サービスをご紹介します。",
     "aboutUs": "会社概要",
-    "contactUs": "お問い合わせ"
+    "contactUs": "お問い合わせ",
+    "miltonGlobalApproved": {
+      "title": "Ultency Matching Engine（LD4）でミルトングローバルが流動性プロバイダーとして利用可能に",
+      "excerpt": "Ultency を利用するMT5ブローカーは、ミルトングローバルを既存の設定に追加し、銘柄やクライアントグループ単位でのマークアップやルーティング、リスク管理を行えます。"
+    }
   },
   "articles": {
     "title": "記事",
@@ -1031,8 +1057,8 @@
     "aboutUs": "会社概要",
     "contactUs": "お問い合わせ",
     "authors": {
-      "miltonglobalresearchteam": "ミルトングローバル研究チーム",
-      "miltonglobalcomplianceteam": "ミルトングローバルコンプライアンスチーム"
+      "miltonGlobalResearchTeam": "ミルトングローバル研究チーム",
+      "miltonGlobalComplianceTeam": "ミルトングローバルコンプライアンスチーム"
     },
     "whatIsUltancy": {
       "title": "ウルテンシーとは？MetaQuotesマッチングエンジン完全ガイド",

@@ -40,13 +40,13 @@ export async function generateMetadata({
   let translatedExcerpt = article.excerpt;
   let translatedAuthor = article.author;
 
-  if (slug === 'what-is-ultancy-complete-guide') {
+  if (slug === 'whatIsUltancy') {
     // We need to get translations here too
     const t = await getTranslations({ locale, namespace: 'articles' });
     translatedTitle = t('whatIsUltancy.title');
     translatedExcerpt = t('whatIsUltancy.excerpt');
     translatedAuthor = article.author === 'Milton Global Research Team' ? t('authors.miltonGlobalResearchTeam') : article.author;
-  } else if (slug === 'fsa-regulation-explained-seychelles-licensing') {
+  } else if (slug === 'fsaRegulation') {
     const t = await getTranslations({ locale, namespace: 'articles' });
     translatedTitle = t('fsaRegulation.title');
     translatedExcerpt = t('fsaRegulation.excerpt');
@@ -91,11 +91,11 @@ export default async function ArticlePage({
   let translatedTitle = article.title;
   let translatedExcerpt = article.excerpt;
 
-  if (slug === 'what-is-ultancy-complete-guide') {
+  if (slug === 'whatIsUltancy') {
     translatedTitle = t('whatIsUltancy.title');
     translatedExcerpt = t('whatIsUltancy.excerpt');
     translatedContent = t('whatIsUltancy.content');
-  } else if (slug === 'fsa-regulation-explained-seychelles-licensing') {
+  } else if (slug === 'fsaRegulation') {
     translatedTitle = t('fsaRegulation.title');
     translatedExcerpt = t('fsaRegulation.excerpt');
     translatedContent = t('fsaRegulation.content');
@@ -178,7 +178,7 @@ export default async function ArticlePage({
             {/* Hero Image */}
             <div className="mb-6 rounded-lg overflow-hidden">
               <img
-                src={slug === 'what-is-ultancy-complete-guide' ? "/images/what-is-ultency.png" : "/images/milton-global-hero.png"}
+                src={slug === 'whatIsUltancy' ? "/images/what-is-ultency.png" : "/images/milton-global-hero.png"}
                 alt={article.title}
                 className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover"
               />

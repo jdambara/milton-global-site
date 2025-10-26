@@ -9,30 +9,41 @@ export default function LatestContentSection() {
   const t = useTranslations('latestContent');
   const locale = useLocale() as L;
 
+  // Helper function to get category translation
+  const getCategoryTranslation = (category: string) => {
+    try {
+      return t(`categories.${category}` as any);
+    } catch (error) {
+      // Fallback to the category name if translation fails
+      return category;
+    }
+  };
+
   // Mock data - will be replaced with actual content
   const articles = [
     {
-      title: 'What is Ultency? Complete Guide to MetaQuotes Matching Engine',
-      excerpt: 'Discover how Ultency revolutionizes liquidity aggregation with ultra-low latency execution.',
-      slug: 'what-is-ultency-complete-guide',
+      title: t('articles.whatIsUltancy.title'),
+      excerpt: t('articles.whatIsUltancy.excerpt'),
+      slug: 'whatIsUltancy',
       category: 'Technology',
-      date: '2025-01-15'
+      date: '2025-10-25'
     },
     {
-      title: 'FSA Regulation Explained: Why Seychelles Licensing Matters',
-      excerpt: 'Understanding the benefits and requirements of Seychelles FSA regulation for brokers.',
-      slug: 'fsa-regulation-explained',
+      title: t('articles.fsaRegulation.title'),
+      excerpt: t('articles.fsaRegulation.excerpt'),
+      slug: 'fsaRegulation',
       category: 'Regulation',
-      date: '2025-01-10'
+      date: '2025-09-19'
     },
   ];
 
   const news = [
     {
-      title: 'Milton Global Approved as Ultency Liquidity Provider',
-      excerpt: 'We are proud to announce our approval as an official liquidity provider on the MetaQuotes Ultency platform.',
-      slug: 'milton-global-approved-ultency-provider',
-      date: '2025-01-20'
+      title: t('news.miltonGlobalApproved.title'),
+      excerpt: t('news.miltonGlobalApproved.excerpt'),
+      slug: 'milton-global-approved-ultancy-provider',
+      category: 'Company',
+      date: '2025-09-24'
     },
   ];
 
@@ -52,7 +63,7 @@ export default function LatestContentSection() {
           {/* Articles */}
           <div>
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-h2 font-semibold text-gray-900">{t('articles')}</h3>
+              <h3 className="text-h2 font-semibold text-gray-900">{t('articlesTitle')}</h3>
               <Link 
                 href={lp(locale, 'articles')}
                 className="text-body text-brand-red hover:text-brand-600 font-medium"
@@ -64,8 +75,8 @@ export default function LatestContentSection() {
               {articles.map((article) => (
                 <Card key={article.slug} hover className="p-6">
                   <Link href={lp(locale, `articles/${article.slug}`)}>
-                    <div className="text-small text-blue-600 font-medium mb-2">
-                      {article.category}
+                    <div className="text-small bg-black text-white px-2 py-1 rounded font-medium mb-2 inline-block">
+                      {getCategoryTranslation(article.category)}
                     </div>
                     <h4 className="text-body-large font-semibold text-gray-900 mb-2">
                       {article.title}
@@ -89,7 +100,7 @@ export default function LatestContentSection() {
           {/* News */}
           <div>
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-h2 font-semibold text-gray-900">{t('news')}</h3>
+              <h3 className="text-h2 font-semibold text-gray-900">{t('newsTitle')}</h3>
               <Link 
                 href={lp(locale, 'news')}
                 className="text-body text-brand-red hover:text-brand-600 font-medium"
@@ -101,8 +112,8 @@ export default function LatestContentSection() {
               {news.map((item) => (
                 <Card key={item.slug} hover className="p-6">
                   <Link href={lp(locale, `news/${item.slug}`)}>
-                    <div className="text-small text-blue-600 font-medium mb-2">
-                      Company News
+                    <div className="text-small bg-black text-white px-2 py-1 rounded font-medium mb-2 inline-block">
+                      {getCategoryTranslation(item.category)}
                     </div>
                     <h4 className="text-body-large font-semibold text-gray-900 mb-2">
                       {item.title}

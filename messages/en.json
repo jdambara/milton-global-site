@@ -134,9 +134,31 @@
   "latestContent": {
     "title": "Latest from Milton Global",
     "subtitle": "Stay informed with our latest insights on regulation, technology, and market developments",
-    "articles": "Articles",
-    "news": "Company News",
-    "viewAll": "View All"
+    "articlesTitle": "Articles",
+    "newsTitle": "Company News",
+    "viewAll": "View All",
+    "categories": {
+      "Technology": "Technology",
+      "Company": "Company",
+      "News": "News",
+      "Regulation": "Regulation"
+    },
+    "articles": {
+      "whatIsUltancy": {
+        "title": "What is Ultency? Complete Guide to MetaQuotes Matching Engine",
+        "excerpt": "Discover Ultency, MetaQuotes' ultra-low latency matching engine for MT5 brokers. Learn how it reduces costs, improves execution, and provides access to multiple liquidity providers in one platform."
+      },
+      "fsaRegulation": {
+        "title": "FSA Seychelles Regulation: Complete FAQ Guide for Brokers and Traders",
+        "excerpt": "Complete FAQ guide covering FSA Seychelles licensing requirements, client protection, compliance obligations, and how it compares to FCA, ASIC, CySEC. Everything brokers and traders need to know about FSA regulation."
+      }
+    },
+    "news": {
+      "miltonGlobalApproved": {
+        "title": "Milton Global Listed as Liquidity Provider in Ultency Matching Engine (LD4)",
+        "excerpt": "Brokers using Ultency can now add Milton Global as a venue within their MT5 setup and manage routing, markups, and risk according to their framework."
+      }
+    }
   },
   "cta": {
     "title": "Ready to Partner?",
@@ -752,7 +774,11 @@
     "learnMore": "Learn More About Milton Global",
     "learnMoreDescription": "Discover our FSA-regulated trading solutions and Ultency liquidity services.",
     "aboutUs": "About Us",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "miltonGlobalApproved": {
+      "title": "Milton Global Listed as Liquidity Provider in Ultency Matching Engine (LD4)",
+      "excerpt": "Brokers using Ultency can now add Milton Global as a venue within their MT5 setup and manage routing, markups, and risk according to their framework."
+    }
   },
   "articles": {
     "title": "Articles",

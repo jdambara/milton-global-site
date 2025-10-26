@@ -138,9 +138,31 @@
   "latestContent": {
     "title": "Lo Último de Milton Global",
     "subtitle": "Manténgase informado con nuestras últimas perspectivas sobre regulación, tecnología y desarrollos del mercado",
-    "articles": "Artículos",
-    "news": "Noticias Corporativas",
-    "viewAll": "Ver Todos"
+    "articlesTitle": "Artículos",
+    "newsTitle": "Noticias Corporativas",
+    "viewAll": "Ver Todos",
+    "categories": {
+      "Technology": "Tecnología",
+      "Company": "Empresa",
+      "News": "Noticias",
+      "Regulation": "Regulación"
+    },
+    "articles": {
+      "whatIsUltancy": {
+        "title": "¿Qué es Ultency? Guía Completa del Motor de Matching de MetaQuotes",
+        "excerpt": "Descubre Ultency, el motor de matching de ultra-baja latencia de MetaQuotes para brokers MT5. Aprende cómo reduce costos, mejora la ejecución y proporciona acceso a múltiples proveedores de liquidez en una plataforma."
+      },
+      "fsaRegulation": {
+        "title": "Regulación FSA Seychelles: Guía Completa de FAQ para Brokers y Traders",
+        "excerpt": "Guía completa de FAQ que cubre los requisitos de licencia FSA Seychelles, protección del cliente, obligaciones de cumplimiento y cómo se compara con FCA, ASIC, CySEC. Todo lo que brokers y traders necesitan saber sobre la regulación FSA."
+      }
+    },
+    "news": {
+      "miltonGlobalApproved": {
+        "title": "Milton Global Listado como Proveedor de Liquidez en Ultency Matching Engine (LD4)",
+        "excerpt": "Los brokers que utilizan Ultency ahora pueden agregar Milton Global como un venue dentro de su configuración MT5 y gestionar el enrutamiento, márgenes y riesgo según su marco de trabajo."
+      }
+    }
   },
   "cta": {
     "title": "¿Listo para Asociarte?",
@@ -1011,7 +1033,11 @@
     "learnMore": "Conoce Más Sobre Milton Global",
     "learnMoreDescription": "Descubre nuestras soluciones de trading reguladas por FSA y servicios de liquidez Ultency.",
     "aboutUs": "Acerca de Nosotros",
-    "contactUs": "Contáctanos"
+    "contactUs": "Contáctanos",
+    "miltonGlobalApproved": {
+      "title": "Milton Global Listado como Proveedor de Liquidez en Ultency Matching Engine (LD4)",
+      "excerpt": "Los brokers que utilizan Ultency ahora pueden agregar Milton Global como un venue dentro de su configuración MT5 y gestionar el enrutamiento, márgenes y riesgo según su marco de trabajo."
+    }
   },
   "articles": {
     "title": "Artículos",

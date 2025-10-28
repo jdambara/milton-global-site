@@ -31,13 +31,8 @@
     "title": "MT4/MT5 ブランドのための FSA ライセンス基盤",
     "subtitle": "接続・ホスティング／流動性・ブリッジ／KYC・AML／リスク・レポート／PAMM／ホワイトラベル",
     "description": "ミルトングローバルは、ブローカーの立ち上げと拡大に必要な基盤を一気通貫で提供します。プラットフォーム接続と流動性からコンプライアンス、運用まで、統合スタックで支えます。",
-    "ctaPrimary": "IFX EXPO面談のご予約",
-    "ctaSecondary": "サービス一覧を見る",
-    "ifxBanner": {
-      "event": "IFX EXPO Asia 2025",
-      "date": "10月26-28日 香港",
-      "cta": "現地でお会いしましょう！"
-    }
+    "ctaPrimary": "お問い合わせ",
+    "ctaSecondary": "サービス一覧を見る"
   },
   "metrics": {
     "a": {

@@ -31,13 +31,8 @@
     "title": "FSA-licensed brokerage infrastructure for MT4/MT5 brands",
     "subtitle": "Connectivity and hosting • Liquidity and bridge • KYC/AML onboarding • Risk and reporting • PAMM • White-label",
     "description": "Milton Global provides the end-to-end infrastructure brokers use to launch and scale. From platform connectivity and liquidity to compliance and operations, we deliver a single, integrated stack.",
-    "ctaPrimary": "Book IFX EXPO Meeting",
-    "ctaSecondary": "Explore Our Services",
-    "ifxBanner": {
-      "event": "IFX EXPO Asia 2025",
-      "date": "Oct 26-28, Hong Kong",
-      "cta": "Meet us there!"
-    }
+    "ctaPrimary": "Get in Touch",
+    "ctaSecondary": "Explore Our Services"
   },
   "metrics": {
     "a": {
@@ -819,8 +814,8 @@
     "aboutUs": "About Us",
     "contactUs": "Contact Us",
     "authors": {
-      "miltonglobalresearchteam": "Milton Global Research Team",
-      "miltonglobalcomplianceteam": "Milton Global Compliance Team"
+      "miltonGlobalResearchTeam": "Milton Global Research Team",
+      "miltonGlobalComplianceTeam": "Milton Global Compliance Team"
     },
     "whatIsUltancy": {
       "title": "What is Ultency? Complete Guide to MetaQuotes Matching Engine",

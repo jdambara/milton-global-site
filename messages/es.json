@@ -31,13 +31,8 @@
     "title": "Infraestructura de corretaje con licencia FSA para marcas MT4/MT5",
     "subtitle": "Conectividad y hosting • Liquidez y bridge • Onboarding KYC/AML • Riesgo e informes • PAMM • White-label",
     "description": "Milton Global ofrece la infraestructura integral para lanzar y escalar un bróker. Desde la conectividad de plataformas y la liquidez hasta el compliance y la operación, todo en un único stack integrado.",
-    "ctaPrimary": "Solicitar Reunión IFX EXPO",
-    "ctaSecondary": "Explorar Nuestros Servicios",
-    "ifxBanner": {
-      "event": "IFX EXPO Asia 2025",
-      "date": "26-28 Oct, Hong Kong",
-      "cta": "¡Nos vemos allí!"
-    }
+    "ctaPrimary": "Contáctenos",
+    "ctaSecondary": "Explorar Nuestros Servicios"
   },
   "metrics": {
     "a": {
@@ -1078,8 +1073,8 @@
     "aboutUs": "Acerca de Nosotros",
     "contactUs": "Contáctanos",
     "authors": {
-      "miltonglobalresearchteam": "Equipo de Investigación Milton Global",
-      "miltonglobalcomplianceteam": "Equipo de Cumplimiento Milton Global"
+      "miltonGlobalResearchTeam": "Equipo de Investigación Milton Global",
+      "miltonGlobalComplianceTeam": "Equipo de Cumplimiento Milton Global"
     },
     "whatIsUltancy": {
       "title": "¿Qué es Ultency? Guía Completa del Motor de Emparejamiento MetaQuotes",

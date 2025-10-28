@@ -44,18 +44,6 @@ export default function HeroSection() {
       {/* Content */}
       <div className="container-custom relative z-10 flex flex-col justify-between min-h-[600px] md:min-h-[700px] py-12">
         <div className="max-w-6xl">
-          {/* IFX Expo Banner */}
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded text-small mb-6 border border-white/20">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <span className="font-semibold">{t('ifxBanner.event')}</span>
-            <span className="mx-2 opacity-60">|</span>
-            <span>{t('ifxBanner.date')}</span>
-            <span className="mx-2 opacity-60">|</span>
-            <span>{t('ifxBanner.cta')}</span>
-          </div>
-
           {/* Main Heading */}
           <h1 className="text-h1 md:text-[56px] md:leading-[64px] font-bold text-white mb-4">
             {t('title')}

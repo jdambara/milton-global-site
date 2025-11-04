@@ -110,7 +110,7 @@
       "description": "柔軟な当社リテールオペレーション。高度な取引機能、多様な商品、様々な市場セグメントへの対応力を示しています。",
       "features": {
         "flexibility": "強化された取引の自由度",
-        "platforms": "MT4・MT5・PAMMソリューション",
+        "platforms": "PAMMソリューション",
         "leverage": "最大1:1000のレバレッジ",
         "minimum": "最低入金額 $100",
         "promotions": "入金ボーナス・キャッシュバック",
@@ -870,8 +870,8 @@
   "miltonMarketsPage": {
     "meta": {
       "title": "ミルトンマーケッツ - グローバル取引プラットフォーム | ミルトングローバル運営",
-      "description": "ミルトンマーケッツ（Milton Markets）はミルトングローバル運営のグローバル取引プラットフォーム。MT4/MT5/PAMM、最大レバレッジ1:1000、1000種類以上のCFD商品、100カ国以上でサービス提供。",
-      "keywords": "ミルトンマーケッツ, Milton Markets, ミルトングローバル取引プラットフォーム, ハイレバレッジブローカー, MT4 MT5 PAMM, 1000 CFD商品, グローバルフォレックスブローカー, マルチ通貨取引"
+      "description": "ミルトンマーケッツ（Milton Markets）はミルトングローバル運営のグローバル取引プラットフォーム。PAMM、最大レバレッジ1:1000、1000種類以上のCFD商品、100カ国以上でサービス提供。",
+      "keywords": "ミルトンマーケッツ, Milton Markets, ミルトングローバル取引プラットフォーム, ハイレバレッジブローカー, PAMM, 1000 CFD商品, グローバルフォレックスブローカー, マルチ通貨取引"
     },
     "hero": {
       "badge": "柔軟な取引オペレーション",
@@ -909,7 +909,7 @@
       },
       "platforms": {
         "label": "取引プラットフォーム",
-        "value": "MT4、MT5、PAMM"
+        "value": "PAMM"
       },
       "leverage": {
         "label": "最大レバレッジ",
@@ -925,10 +925,10 @@
       }
     },
     "platforms": {
-      "mt4": "クラシック取引",
-      "mt5": "マルチアセットプラットフォーム",
+      "api": "APIアクセス",
+      "web": "ウェブプラットフォーム",
       "pamm": "ファンド管理",
-      "mobile": "iOS & Android"
+      "promotions": "プロモーション・ボーナス"
     },
     "operations": {
       "title": "グローバルオペレーション",
@@ -943,7 +943,7 @@
       },
       "technology": {
         "title": "高度な技術スタック",
-        "description": "API統合とモバイル取引ソリューションを含むMT4、MT5、PAMMプラットフォーム。"
+        "description": "API統合、ウェブ取引、魅力的なプロモーションを含むPAMMプラットフォーム。"
       }
     },
     "cta": {

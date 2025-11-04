@@ -273,7 +273,11 @@ export default async function ArticlePage({
                           })}
                         </span>
                         <span className="text-gray-400">•</span>
-                        <span>{related.author}</span>
+                        <span>
+                          {related.author === 'Milton Global Research Team' ? t('authors.miltonGlobalResearchTeam') : 
+                           related.author === 'Milton Global Compliance Team' ? t('authors.miltonGlobalComplianceTeam') : 
+                           related.author}
+                        </span>
                       </div>
                     </Link>
                   </Card>

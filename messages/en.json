@@ -108,7 +108,7 @@
       "description": "Our flexible retail operation showcasing advanced trading capabilities, diverse products, and our ability to serve various market segments.",
       "features": {
         "flexibility": "Flexible Trading Conditions",
-        "platforms": "MT4, MT5 & PAMM Solutions",
+        "platforms": "PAMM Solutions",
         "leverage": "Extended Leverage Options",
         "instruments": "Comprehensive Product Range"
       },
@@ -615,8 +615,8 @@
   "miltonMarketsPage": {
     "meta": {
       "title": "Milton Markets - Global Trading Platform | Milton Global Operations",
-      "description": "Trade globally with Milton Markets, operated by Milton Global. Access MT4/MT5/PAMM platforms, leverage up to 1:1000, 1000+ CFD instruments, multi-currency support across 100+ countries.",
-      "keywords": "Milton Markets, Milton Global trading platform, high leverage broker, MT4 MT5 PAMM, 1000 CFD instruments, global forex broker, multi-currency trading, flexible trading conditions"
+      "description": "Trade globally with Milton Markets, operated by Milton Global. Access PAMM platforms, leverage up to 1:1000, 1000+ CFD instruments, multi-currency support across 100+ countries.",
+      "keywords": "Milton Markets, Milton Global trading platform, high leverage broker, PAMM, 1000 CFD instruments, global forex broker, multi-currency trading, flexible trading conditions"
     },
     "hero": {
       "badge": "Flexible Trading Operations",
@@ -654,7 +654,7 @@
       },
       "platforms": {
         "label": "Trading Platforms",
-        "value": "MT4, MT5, PAMM"
+        "value": "PAMM"
       },
       "leverage": {
         "label": "Maximum Leverage",
@@ -670,10 +670,10 @@
       }
     },
     "platforms": {
-      "mt4": "Classic Trading",
-      "mt5": "Multi-Asset Platform",
+      "api": "API Access",
+      "web": "Web Platform",
       "pamm": "Fund Management",
-      "mobile": "iOS & Android"
+      "promotions": "Promotions & Bonuses"
     },
     "operations": {
       "title": "Global Operations",
@@ -688,7 +688,7 @@
       },
       "technology": {
         "title": "Advanced Technology Stack",
-        "description": "MT4, MT5, and PAMM platforms with API integration and mobile trading solutions."
+        "description": "PAMM platforms with API integration, web trading, and attractive promotions."
       }
     },
     "cta": {

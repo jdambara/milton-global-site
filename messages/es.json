@@ -110,7 +110,7 @@
       "description": "Nuestra operación minorista flexible que muestra capacidades avanzadas de trading y ofertas de productos diversos. Demuestra nuestra capacidad para servir a varios segmentos del mercado manteniendo la excelencia operativa.",
       "features": {
         "flexibility": "Libertad de Trading Mejorada",
-        "platforms": "MT4, MT5 y Soluciones PAMM",
+        "platforms": "Soluciones PAMM",
         "leverage": "Apalancamiento hasta 1:1000",
         "minimum": "Depósito Mínimo $100",
         "promotions": "Bonos de Depósito y Cashback",
@@ -874,8 +874,8 @@
   "miltonMarketsPage": {
     "meta": {
       "title": "Milton Markets - Plataforma de Trading Global | Operaciones Milton Global",
-      "description": "Opere globalmente con Milton Markets, operado por Milton Global. Acceda a plataformas MT4/MT5/PAMM, apalancamiento hasta 1:1000, más de 1000 instrumentos CFD, soporte multidivisa en 100+ países.",
-      "keywords": "Milton Markets, Milton Global plataforma trading, bróker alto apalancamiento, MT4 MT5 PAMM, 1000 instrumentos CFD, bróker forex global, trading multidivisa, condiciones trading flexibles"
+      "description": "Opere globalmente con Milton Markets, operado por Milton Global. Acceda a plataformas PAMM, apalancamiento hasta 1:1000, más de 1000 instrumentos CFD, soporte multidivisa en 100+ países.",
+      "keywords": "Milton Markets, Milton Global plataforma trading, bróker alto apalancamiento, PAMM, 1000 instrumentos CFD, bróker forex global, trading multidivisa, condiciones trading flexibles"
     },
     "hero": {
       "badge": "Operaciones de Trading Flexibles",
@@ -913,7 +913,7 @@
       },
       "platforms": {
         "label": "Plataformas de Trading",
-        "value": "MT4, MT5, PAMM"
+        "value": "PAMM"
       },
       "leverage": {
         "label": "Apalancamiento Máximo",
@@ -929,10 +929,10 @@
       }
     },
     "platforms": {
-      "mt4": "Trading Clásico",
-      "mt5": "Plataforma Multi-Activo",
+      "api": "Acceso API",
+      "web": "Plataforma Web",
       "pamm": "Gestión de Fondos",
-      "mobile": "iOS y Android"
+      "promotions": "Promociones y Bonos"
     },
     "operations": {
       "title": "Operaciones Globales",
@@ -947,7 +947,7 @@
       },
       "technology": {
         "title": "Stack Tecnológico Avanzado",
-        "description": "Plataformas MT4, MT5 y PAMM con integración API y soluciones de trading móvil."
+        "description": "Plataformas PAMM con integración API, trading web y promociones atractivas."
       }
     },
     "cta": {

@@ -84,20 +84,20 @@ function MiltonMarketsContent() {
             <div className="mt-12 max-w-4xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-200 rounded overflow-hidden">
                 <div className="bg-white p-6 text-center">
-                  <div className="text-xl font-bold text-gray-900 mb-1">MT4</div>
-                  <p className="text-sm text-gray-600">{t('platforms.mt4')}</p>
+                  <div className="text-xl font-bold text-gray-900 mb-1">API</div>
+                  <p className="text-sm text-gray-600">{t('platforms.api')}</p>
                 </div>
                 <div className="bg-white p-6 text-center">
-                  <div className="text-xl font-bold text-gray-900 mb-1">MT5</div>
-                  <p className="text-sm text-gray-600">{t('platforms.mt5')}</p>
+                  <div className="text-xl font-bold text-gray-900 mb-1">Web</div>
+                  <p className="text-sm text-gray-600">{t('platforms.web')}</p>
                 </div>
                 <div className="bg-white p-6 text-center">
                   <div className="text-xl font-bold text-gray-900 mb-1">PAMM</div>
                   <p className="text-sm text-gray-600">{t('platforms.pamm')}</p>
                 </div>
                 <div className="bg-white p-6 text-center">
-                  <div className="text-xl font-bold text-gray-900 mb-1">Mobile</div>
-                  <p className="text-sm text-gray-600">{t('platforms.mobile')}</p>
+                  <div className="text-xl font-bold text-gray-900 mb-1">Promotions</div>
+                  <p className="text-sm text-gray-600">{t('platforms.promotions')}</p>
                 </div>
               </div>
             </div>
@@ -248,15 +248,15 @@ export default async function MiltonMarketsPage({ params }: { params: Promise<{ 
     "availableChannel": [
       {
         "@type": "ServiceChannel",
-        "name": "MT4",
+        "name": "API",
         "serviceUrl": "https://miltonmarkets.com",
-        "serviceType": locale === 'ja' ? "クラシック取引" : "Classic Trading"
+        "serviceType": locale === 'ja' ? "APIアクセス" : locale === 'es' ? "Acceso API" : "API Access"
       },
       {
         "@type": "ServiceChannel",
-        "name": "MT5",
+        "name": "Web Platform",
         "serviceUrl": "https://miltonmarkets.com",
-        "serviceType": locale === 'ja' ? "マルチアセット取引" : "Multi-Asset Trading"
+        "serviceType": locale === 'ja' ? "ウェブプラットフォーム" : locale === 'es' ? "Plataforma Web" : "Web Platform"
       },
       {
         "@type": "ServiceChannel",
@@ -266,10 +266,9 @@ export default async function MiltonMarketsPage({ params }: { params: Promise<{ 
       },
       {
         "@type": "ServiceChannel",
-        "name": "Mobile Apps",
+        "name": "Promotions & Bonuses",
         "serviceUrl": "https://miltonmarkets.com",
-        "serviceType": "iOS & Android",
-        "availableLanguage": ["en", "es", "ja"]
+        "serviceType": locale === 'ja' ? "プロモーション・ボーナス" : locale === 'es' ? "Promociones y Bonos" : "Promotions & Bonuses"
       }
     ],
     "hasOfferCatalog": {

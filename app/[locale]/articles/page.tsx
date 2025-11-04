@@ -81,7 +81,11 @@ export default async function ArticlesPage({
                         </p>
                         
                         <div className="flex items-center justify-between text-small text-gray-500">
-                          <span>{t(`articles.authors.${article.author.toLowerCase().replace(/\s+/g, '')}` as any) || article.author}</span>
+                          <span>
+                            {article.author === 'Milton Global Research Team' ? t('authors.miltonGlobalResearchTeam') : 
+                             article.author === 'Milton Global Compliance Team' ? t('authors.miltonGlobalComplianceTeam') : 
+                             article.author}
+                          </span>
                           <span>{new Date(article.date).toLocaleDateString(locale, { 
                             year: 'numeric', 
                             month: 'long', 
